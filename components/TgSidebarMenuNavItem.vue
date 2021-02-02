@@ -1,16 +1,12 @@
 <template>
-  <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
   <nuxt-link
     :to="item.link"
     :class="[baseLinkClass, isActive ? activeLinkClass : defaltLinkClass]"
   >
-    <!-- Current: "text-gray-500", Default: "text-gray-400 group-hover:text-gray-500" -->
-
     <component
       :is="item.icon"
       :class="[baseIconClass, isActive ? activeIconClass : defaultIconClass]"
     ></component>
-
     {{ item.label }}
   </nuxt-link>
 </template>
