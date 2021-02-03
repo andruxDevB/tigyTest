@@ -39,7 +39,7 @@
           <select
             id="location"
             name="location"
-            class="shadow-sm mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none border focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+            class="shadow-sm mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none border focus:ring-pruple-500 focus:border-pruple-500 sm:text-sm rounded-md"
           >
             <option>USA</option>
             <option selected>Canada</option>
