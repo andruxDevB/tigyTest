@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
+    class="bg-auth min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
   >
     <div class="max-w-md w-full space-y-8">
       <img class="mx-auto w-auto" src="/logo.svg" alt="Workflow" />
@@ -9,7 +9,7 @@
   </div>
 </template>
 <style>
-body {
+.bg-auth {
   background: url(~assets/img/bg.svg) no-repeat bottom center;
   background-size: cover;
 }

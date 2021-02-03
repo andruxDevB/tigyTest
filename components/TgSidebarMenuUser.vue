@@ -1,7 +1,7 @@
 <template>
-  <div class="p-12">
+  <div class="p-12 pb-6">
     <img
-      class="inline-block h-14 w-14 rounded-full border- border-white shadow-lg"
+      class="inline-block rounded-full border-3 border-white shadow-lg"
       :src="user.foto"
       :alt="user.username"
     />
