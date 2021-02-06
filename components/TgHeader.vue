@@ -1,5 +1,5 @@
 <template>
-  <div class="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
+  <div class="relative flex-shrink-0 flex h-16 bg-white shadow z-0">
     <button
       class="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
       @click="navToggle()"

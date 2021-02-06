@@ -12,6 +12,7 @@
       <tg-tl-banner-action
         icon="HandIcon"
         label="Solicitar ayuda"
+        @click.native="sidebarHelpToggle()"
       ></tg-tl-banner-action>
     </div>
     <div class="flex flex-col flex-grow-0">
@@ -23,7 +24,14 @@
   </div>
 </template>
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'TgTlBanner',
+  methods: {
+    ...mapMutations({
+      sidebarHelpToggle: 'help/TOGGLE_SIDEBAR',
+    }),
+  },
 }
 </script>
