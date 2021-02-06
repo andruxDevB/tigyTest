@@ -25,7 +25,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vee-validate.js', '~/plugins/i18n.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -48,6 +48,22 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/svg',
     '@nuxtjs/auth-next',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            code: 'es',
+            iso: 'es-ES',
+            file: 'es/index.js',
+          },
+        ],
+        lazy: true,
+        defaultLocale: 'es',
+        strategy: 'prefix_except_default',
+        langDir: 'lang/',
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

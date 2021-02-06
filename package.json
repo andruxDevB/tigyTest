@@ -19,7 +19,9 @@
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/ui": "^0.7.2",
     "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-i18n": "^6.20.0",
+    "vee-validate": "^3.4.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
