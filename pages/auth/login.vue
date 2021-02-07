@@ -14,40 +14,40 @@
         >
       </p>
     </div>
-    <form class="mt-8 space-y-6" @submit.prevent="userLogin">
-      <div>
-        <label for="login" class="block text-sm font-medium text-gray-700">
-          Email
-        </label>
-        <div class="mt-1">
-          <input
-            id="login"
-            v-model="auth.login"
-            name="login"
-            type="email"
-            autocomplete="email"
-            required
-            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-1">
-        <label for="password" class="block text-sm font-medium text-gray-700">
-          Contraseña
-        </label>
-        <div class="mt-1">
-          <input
-            id="password"
-            v-model="auth.password"
-            name="password"
-            type="password"
-            autocomplete="current-password"
-            required
-            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-          />
-        </div>
-      </div>
+    <ValidationObserver
+      ref="observer"
+      class="mt-8 space-y-6"
+      tag="form"
+      @submit.prevent="userLogin"
+    >
+      <ValidationProvider
+        v-slot="{ errors }"
+        rules="required|email"
+        name="email"
+        slim
+      >
+        <tg-input
+          v-model="auth.login"
+          type="email"
+          name="email"
+          :errors="errors"
+          >Email</tg-input
+        >
+      </ValidationProvider>
+      <ValidationProvider
+        v-slot="{ errors }"
+        rules="required"
+        name="password"
+        slim
+      >
+        <tg-input
+          v-model="auth.password"
+          type="password"
+          name="password"
+          :errors="errors"
+          >Contraseña</tg-input
+        >
+      </ValidationProvider>
 
       <div class="flex items-center justify-between">
         <div class="text-sm">
@@ -68,12 +68,17 @@
           Inicia sesión
         </button>
       </div>
-    </form>
+    </ValidationObserver>
   </div>
 </template>
 
 <script>
+import { ValidationObserver, ValidationProvider } from 'vee-validate'
 export default {
+  components: {
+    ValidationObserver,
+    ValidationProvider,
+  },
   layout: 'auth',
   transition: 'slide-bottom',
   data() {
