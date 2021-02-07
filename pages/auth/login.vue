@@ -37,7 +37,7 @@
       <ValidationProvider
         v-slot="{ errors }"
         rules="required"
-        name="password"
+        name="contraseña"
         slim
       >
         <tg-input
@@ -93,11 +93,14 @@ export default {
   },
   methods: {
     async userLogin() {
-      this.loading = true
       try {
-        await this.$auth.loginWith('local', {
-          data: this.auth,
-        })
+        this.loading = true
+        const isValid = await this.$refs.observer.validate()
+        if (isValid) {
+          await this.$auth.loginWith('local', {
+            data: this.auth,
+          })
+        }
       } catch (err) {
       } finally {
         this.loading = false

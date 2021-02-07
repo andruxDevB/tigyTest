@@ -85,6 +85,16 @@
         </div>
       </transition>
     </div>
+    <template v-if="isInvalid">
+      <p
+        v-for="(error, index) in errors"
+        :id="`${name}-error`"
+        :key="`${name}-error-message-${index}`"
+        class="mt-2 text-sm text-red-600"
+      >
+        {{ error }}
+      </p>
+    </template>
   </div>
 </template>
 <script>
@@ -116,6 +126,7 @@ export default {
   data() {
     return {
       isOpen: false,
+      currentIndex: -1,
     }
   },
   watch: {
@@ -124,12 +135,15 @@ export default {
     },
   },
   methods: {
+    isCurrent(index) {
+      return this.currentIndex === index
+    },
+    isInvalid() {
+      return this.errors && this.errors.length > 0
+    },
     setCurrent(index) {
       this.isOpen = false
       this.currentIndex = index
-    },
-    isCurrent(index) {
-      return this.currentIndex === index
     },
     activeClass(index) {
       return this.currentIndex === index

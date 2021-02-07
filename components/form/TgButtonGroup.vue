@@ -83,6 +83,9 @@ export default {
     isLast(index) {
       return index + 1 === this.items.length
     },
+    isInvalid() {
+      return this.errors && this.errors.length > 0
+    },
     setCurrent(index) {
       this.currentIndex = index
     },
