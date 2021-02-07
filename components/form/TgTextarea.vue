@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="space-y-1">
     <label :for="name" class="block text-sm font-medium text-gray-900">
       <slot> Label </slot>
     </label>
@@ -47,7 +47,7 @@ export default {
     },
     rows: {
       type: Number,
-      default: 5,
+      default: 3,
     },
     errors: {
       type: Array,
