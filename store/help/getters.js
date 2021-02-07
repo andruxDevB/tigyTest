@@ -2,7 +2,10 @@ export default {
   sidebar(state) {
     return state.sidebar
   },
-  quantity(state) {
-    return state.quantity
+  rewards(state) {
+    return state.rewards
+  },
+  privacy(state) {
+    return state.privacy
   },
 }
