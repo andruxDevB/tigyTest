@@ -97,193 +97,19 @@
                           >¿Que necesitas?</tg-textarea
                         >
                       </ValidationProvider>
-                      <tg-button-g>
-                        Selecciona el valor de la recompensa
-                      </tg-button-g>
-                      <div>
-                        <label
-                          for="project_name"
-                          class="block text-sm font-medium text-gray-900"
-                        >
-                          Project name
-                        </label>
-                        <div class="mt-1">
-                          <input
-                            id="project_name"
-                            type="text"
-                            name="project_name"
-                            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <label
-                          for="description"
-                          class="block text-sm font-medium text-gray-900"
-                        >
-                          Description
-                        </label>
-                        <div class="mt-1">
-                          <textarea
-                            id="description"
-                            name="description"
-                            rows="4"
-                            class="block w-full shadow-sm sm:text-sm focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <div>
-                        <h3 class="text-sm font-medium text-gray-900">
-                          Team Members
-                        </h3>
-                        <div class="mt-2">
-                          <div class="flex space-x-2">
-                            <a href="#" class="rounded-full hover:opacity-75">
-                              <img
-                                class="inline-block h-8 w-8 rounded-full"
-                                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                                alt="Tom Warner"
-                              />
-                            </a>
-                            <a href="#" class="rounded-full hover:opacity-75">
-                              <img
-                                class="inline-block h-8 w-8 rounded-full"
-                                src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                                alt="Sally Preston"
-                              />
-                            </a>
-                            <a href="#" class="rounded-full hover:opacity-75">
-                              <img
-                                class="inline-block h-8 w-8 rounded-full"
-                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2.25&amp;w=256&amp;h=256&amp;q=80"
-                                alt="Dave Gusman"
-                              />
-                            </a>
-                            <a href="#" class="rounded-full hover:opacity-75">
-                              <img
-                                class="inline-block h-8 w-8 rounded-full"
-                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                                alt="Tom Cook"
-                              />
-                            </a>
-                            <a href="#" class="rounded-full hover:opacity-75">
-                              <img
-                                class="inline-block h-8 w-8 rounded-full"
-                                src="https://images.unsplash.com/photo-1586297098710-0382a496c814?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=256&amp;h=256&amp;q=80"
-                                alt="Brandon Rogers"
-                              />
-                            </a>
-                            <button
-                              type="button"
-                              class="flex-shrink-0 bg-white inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-dashed border-gray-200 text-gray-400 hover:text-gray-500 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
-                            >
-                              <span class="sr-only">Add team member</span>
-                              <svg
-                                class="h-5 w-5"
-                                x-description="Heroicon name: solid/plus"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
-                                aria-hidden="true"
-                              >
-                                <path
-                                  fill-rule="evenodd"
-                                  d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
-                                  clip-rule="evenodd"
-                                ></path>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <fieldset>
-                        <legend class="text-sm font-medium text-gray-900">
-                          Privacy
-                        </legend>
-                        <div class="mt-2 space-y-5">
-                          <div class="relative flex items-start">
-                            <div class="absolute flex items-center h-5">
-                              <input
-                                id="privacy_public"
-                                name="privacy_public"
-                                aria-describedby="privacy_public_description"
-                                type="radio"
-                                class="focus:ring-purple-500 h-4 w-4 text-purple-600 border-gray-300"
-                              />
-                            </div>
-                            <div class="pl-7 text-sm">
-                              <label
-                                for="privacy_public"
-                                class="font-medium text-gray-900"
-                              >
-                                Public access
-                              </label>
-                              <p
-                                id="privacy_public_description"
-                                class="text-gray-500"
-                              >
-                                Everyone with the link will see this project.
-                              </p>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="relative flex items-start">
-                              <div class="absolute flex items-center h-5">
-                                <input
-                                  id="privacy_private-to-project"
-                                  name="privacy_private-to-project"
-                                  aria-describedby="privacy_private-to-project_description"
-                                  type="radio"
-                                  class="focus:ring-purple-500 h-4 w-4 text-purple-600 border-gray-300"
-                                />
-                              </div>
-                              <div class="pl-7 text-sm">
-                                <label
-                                  for="privacy_private-to-project"
-                                  class="font-medium text-gray-900"
-                                >
-                                  Private to project members
-                                </label>
-                                <p
-                                  id="privacy_private-to-project_description"
-                                  class="text-gray-500"
-                                >
-                                  Only members of this project would be able to
-                                  access.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="relative flex items-start">
-                              <div class="absolute flex items-center h-5">
-                                <input
-                                  id="privacy_private"
-                                  name="privacy_private"
-                                  aria-describedby="privacy_private-to-project_description"
-                                  type="radio"
-                                  class="focus:ring-purple-500 h-4 w-4 text-purple-600 border-gray-300"
-                                />
-                              </div>
-                              <div class="pl-7 text-sm">
-                                <label
-                                  for="privacy_private"
-                                  class="font-medium text-gray-900"
-                                >
-                                  Private to you
-                                </label>
-                                <p
-                                  id="privacy_private_description"
-                                  class="text-gray-500"
-                                >
-                                  You are the only one able to access this
-                                  project.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </fieldset>
+                      <tg-button-group
+                        v-model="help.cantidad_id"
+                        :items="rewards"
+                        name="recompenza"
+                      >
+                        Selecciona el valor de la recompenza</tg-button-group
+                      >
+                      <tg-drop-down
+                        v-model="help.tipoayuda_id"
+                        name="privacidad"
+                        :items="privacy"
+                        >Privacidad</tg-drop-down
+                      >
                     </div>
                     <div class="pt-4 pb-6">
                       <div class="flex text-sm">
@@ -338,10 +164,7 @@
                 <button
                   type="button"
                   class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
-                  @click="
-                    open = false
-                    setTimeout(() => (open = true), 1000)
-                  "
+                  @click="sidebarToggle()"
                 >
                   Cancel
                 </button>
@@ -378,14 +201,18 @@ export default {
     isVisible() {
       return this.$store.state.help.sidebar
     },
+    rewards() {
+      return this.$store.state.help.rewards
+    },
+    privacy() {
+      return this.$store.state.help.privacy
+    },
   },
   methods: {
     ...mapMutations({
       sidebarToggle: 'help/TOGGLE_SIDEBAR',
     }),
-    submit() {
-      console.info('Error')
-    },
+    submit() {},
   },
 }
 </script>
