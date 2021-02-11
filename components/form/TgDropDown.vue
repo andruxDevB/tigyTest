@@ -9,7 +9,7 @@
         aria-haspopup="listbox"
         aria-expanded="true"
         aria-labelledby="listbox-label"
-        class="bg-white relative w-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
+        :class="[isInvalid ? invalidClass : validClass, baseClass]"
         @click="isOpen = !isOpen"
       >
         <span v-if="currentIndex >= 0" class="block truncate">
@@ -127,7 +127,18 @@ export default {
     return {
       isOpen: false,
       currentIndex: -1,
+      baseClass:
+        'bg-white relative w-full border rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 sm:text-sm',
+      validClass:
+        'border-gray-300 focus:ring-purple-500 focus:border-purple-500 ',
+      invalidClass:
+        'border-red-300 text-red-900 focus:ring-red-500 focus:border-red-500',
     }
+  },
+  computed: {
+    isInvalid() {
+      return this.errors && this.errors.length > 0
+    },
   },
   watch: {
     currentIndex(val) {
@@ -137,9 +148,6 @@ export default {
   methods: {
     isCurrent(index) {
       return this.currentIndex === index
-    },
-    isInvalid() {
-      return this.errors && this.errors.length > 0
     },
     setCurrent(index) {
       this.isOpen = false
