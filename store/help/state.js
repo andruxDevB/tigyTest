@@ -36,6 +36,10 @@ export default () => ({
   ],
   privacy: [
     {
+      name: 'Todos',
+      value: 6,
+    },
+    {
       name: 'Buscar Contacto y Enviar',
       value: 1,
     },
@@ -54,10 +58,6 @@ export default () => ({
     {
       name: 'Seleccionar un País',
       value: 5,
-    },
-    {
-      name: 'Todos',
-      value: 6,
     },
   ],
 })

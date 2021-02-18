@@ -101,7 +101,7 @@
                       <ValidationProvider
                         v-slot="{ errors }"
                         rules="required"
-                        name="tipo de ayuda"
+                        name="recompenza"
                         slim
                       >
                         <tg-button-group
@@ -128,7 +128,9 @@
                         >
                       </ValidationProvider>
                     </div>
-                    <div class="pt-4 pb-6">opciones de config</div>
+                    <div class="pt-4 pb-6">
+                      <pre>{{ countryList }}</pre>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -138,13 +140,13 @@
                   class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
                   @click="sidebarToggle()"
                 >
-                  Cancel
+                  Cancelar
                 </button>
                 <button
                   type="submit"
                   class="ml-4 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
                 >
-                  Save
+                  Enviar solicitud
                 </button>
               </div>
             </ValidationObserver>
@@ -167,6 +169,7 @@ export default {
   data() {
     return {
       help: {},
+      countryList: [],
     }
   },
   computed: {
@@ -186,7 +189,11 @@ export default {
     }),
     async submit() {
       const isValid = await this.$refs.observer.validate()
+      this.getCountries()
       console.log(isValid)
+    },
+    async getCountries() {
+      this.countryList = await this.$store.dispatch('location/getCountryList')
     },
   },
 }

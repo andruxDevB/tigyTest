@@ -1,3 +1,4 @@
+import MomentLocalesPlugin from 'moment-locales-webpack-plugin'
 import authConfig from './config/auth.config'
 
 export default {
@@ -6,10 +7,13 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  env: {
+    API_URL: process.env.API_URL,
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'tigy-front-end',
+    title: 'TIGY',
     htmlAttrs: {
       lang: 'en',
     },
@@ -25,7 +29,12 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vee-validate.js', '~/plugins/i18n.js'],
+  plugins: [
+    '~/plugins/i18n.js',
+    '~/plugins/axios.js',
+    '~/plugins/lodash.js',
+    '~/plugins/vee-validate.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,6 +49,8 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://github.com/whardier/nuxt-hero-icons
     '@nuxt-hero-icons/outline/nuxt',
+    // https://github.com/nuxt-community/moment-module
+    '@nuxtjs/moment',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -68,13 +79,23 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'https://www.tigyapp.com/servicios/public/api',
+    baseURL: process.env.API_URL,
+  },
+
+  // moment module configuration: https://github.com/nuxt-community/moment-module
+  moment: {
+    defaultLocale: 'es',
+    locales: ['es'],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-
-  tailwindcss: {},
+  build: {
+    plugins: [
+      new MomentLocalesPlugin({
+        localesToKeep: ['es'],
+      }),
+    ],
+  },
 
   auth: authConfig,
 
