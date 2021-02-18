@@ -6,11 +6,14 @@
       :type="event.post_type"
       :user="event.user"
     ></tg-post-header>
+    <tg-post-content :event="event" />
   </div>
 </template>
 <script>
+import TgPostContent from './TgPostContent.vue'
 export default {
   name: 'TgPost',
+  components: { TgPostContent },
   props: {
     event: {
       type: Object,
