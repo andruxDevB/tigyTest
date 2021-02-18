@@ -5,7 +5,7 @@ import includes from 'lodash/includes'
 
 // name is optional
 Vue.use(VueLodash, {
-  name: '_',
+  name: 'custom',
   lodash: {
     findKey,
     includes,

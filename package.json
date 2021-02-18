@@ -19,6 +19,7 @@
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/ui": "^0.7.2",
     "core-js": "^3.8.3",
+    "lodash": "^4.17.20",
     "nuxt": "^2.14.12",
     "nuxt-i18n": "^6.20.0",
     "vee-validate": "^3.4.5",
