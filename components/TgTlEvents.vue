@@ -10,18 +10,11 @@
 <script>
 export default {
   name: 'TgTlEvents',
-  data() {
-    return {
-      isLoading: true,
-      events: [],
-    }
-  },
-  mounted() {
-    this.getEvents()
-  },
-  methods: {
-    async getEvents() {
-      this.events = await this.$store.dispatch('timeline/get')
+  props: {
+    events: {
+      type: Array,
+      required: true,
+      default: () => [],
     },
   },
 }

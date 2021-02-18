@@ -1,10 +1,32 @@
 <template>
   <div>
     <tg-tl-banner></tg-tl-banner>
-    <tg-tl-events></tg-tl-events>
+
+    <tg-post-skeleton v-if="$fetchState.pending" class="my-5" />
+    <transition
+      enter-active-class="ease-in-out duration-500"
+      leave-active-class="ease-in-out duration-500"
+      enter-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-class="opacity-100"
+      leave-to-class="opacity-0"
+    >
+      <tg-tl-events v-if="!$fetchState.pending" :events="events"></tg-tl-events>
+    </transition>
   </div>
 </template>
 
 <script>
-export default {}
+import TgPostSkeleton from '~/components/TgPostSkeleton.vue'
+export default {
+  components: { TgPostSkeleton },
+  data() {
+    return {
+      events: [],
+    }
+  },
+  async fetch() {
+    this.events = await this.$store.dispatch('timeline/get')
+  },
+}
 </script>
