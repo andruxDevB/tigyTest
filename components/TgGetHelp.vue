@@ -128,9 +128,7 @@
                         >
                       </ValidationProvider>
                     </div>
-                    <div class="pt-4 pb-6">
-                      <pre>{{ countryList }}</pre>
-                    </div>
+                    <div class="pt-4 pb-6"></div>
                   </div>
                 </div>
               </div>
@@ -189,8 +187,8 @@ export default {
     }),
     async submit() {
       const isValid = await this.$refs.observer.validate()
-      this.getCountries()
-      console.log(isValid)
+      // this.getCountries()
+      // console.log(isValid)
     },
     async getCountries() {
       this.countryList = await this.$store.dispatch('location/getCountryList')
