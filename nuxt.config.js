@@ -34,6 +34,7 @@ export default {
     '~/plugins/axios.js',
     '~/plugins/lodash.js',
     '~/plugins/vee-validate.js',
+    '~/plugins/vue-easy-slider.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

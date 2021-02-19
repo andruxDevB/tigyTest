@@ -24,6 +24,7 @@
     "nuxt-i18n": "^6.20.0",
     "vee-validate": "^3.4.5",
     "vue-autosuggest": "^2.2.0",
+    "vue-easy-slider": "^5.3.4",
     "vue-lodash": "^2.1.2"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "eslint-plugin-vue": "^7.5.0",
     "moment-locales-webpack-plugin": "^1.2.0",
     "prettier": "^2.2.1",
+    "sass": "^1.32.8",
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0"
