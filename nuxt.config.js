@@ -50,6 +50,7 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://github.com/whardier/nuxt-hero-icons
     '@nuxt-hero-icons/outline/nuxt',
+    '@nuxt-hero-icons/solid/nuxt',
     // https://github.com/nuxt-community/moment-module
     '@nuxtjs/moment',
   ],

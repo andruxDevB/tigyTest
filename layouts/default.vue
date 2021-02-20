@@ -10,8 +10,8 @@
         tabindex="0"
       >
         <div class="p-6">
-          <div class="grid lg:grid-cols-6 lg:gap-4">
-            <div class="lg:col-start-2 lg:col-span-4"><Nuxt /></div>
+          <div class="container">
+            <div class="mx-auto max-w-xl"><Nuxt /></div>
           </div>
         </div>
       </main>

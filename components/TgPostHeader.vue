@@ -24,7 +24,7 @@
             :current-user-id="currentUser.user_id"
           />
         </h1>
-        <p class="text-sm font-medium text-gray-500">
+        <p class="text-sm text-gray-400">
           <time datetime="2020-08-25"
             >hace {{ $moment(date).toNow(true) }}</time
           >

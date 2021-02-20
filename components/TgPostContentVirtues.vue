@@ -1,11 +1,11 @@
 <template>
   <slider animation="fade">
     <slider-item v-for="virtue in virtues" :key="`virtue-slide-${virtue.id}`">
-      <div class="relative">
+      <div class="relative h-full">
         <h2 class="text-white absolute top-4 left-4 text-4xl">
           {{ virtue.descripcion }}
         </h2>
-        <img :src="virtue.image" />
+        <img class="object-cover" :src="virtue.image" />
       </div>
     </slider-item>
   </slider>
@@ -18,11 +18,6 @@ export default {
       type: Array,
       default: () => [],
     },
-  },
-  data() {
-    return {
-      options: {},
-    }
   },
 }
 </script>

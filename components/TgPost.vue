@@ -7,13 +7,13 @@
       :user="event.user"
     ></tg-post-header>
     <tg-post-content :event="event" />
+    <tg-post-footer :event="event" />
   </div>
 </template>
 <script>
-import TgPostContent from './TgPostContent.vue'
 export default {
   name: 'TgPost',
-  components: { TgPostContent },
+
   props: {
     event: {
       type: Object,
