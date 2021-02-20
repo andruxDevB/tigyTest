@@ -18,11 +18,17 @@
       />
       <span class="hidden sm:inline-block"> Compartir</span>
     </tg-button>
-    <tg-button type="flat">
-      <outline-dots-horizontal-icon
-        class="w-6 h-6 text-gray-400 mr-1 group-hover:text-gray-500"
-      />
-    </tg-button>
+    <tg-menu>
+      <tg-button type="flat">
+        <outline-dots-horizontal-icon
+          class="w-6 h-6 text-gray-400 mr-1 group-hover:text-gray-500"
+        />
+      </tg-button>
+      <template #items>
+        <tg-menu-item>Reportar</tg-menu-item>
+        <tg-menu-item>Eliminar</tg-menu-item>
+      </template>
+    </tg-menu>
   </div>
 </template>
 <script>
