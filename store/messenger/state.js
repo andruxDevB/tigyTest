@@ -1,7 +1,7 @@
 export default () => ({
   contacts: [],
   thread: {
-    user: null,
+    user: {},
     info: [],
   },
 })

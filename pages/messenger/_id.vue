@@ -1,5 +1,5 @@
 <template>
-  <tg-messenger-chat></tg-messenger-chat>
+  <tg-messenger-chat v-if="!$fetchState.pending"></tg-messenger-chat>
 </template>
 <script>
 export default {
