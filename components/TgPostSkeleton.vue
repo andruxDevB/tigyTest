@@ -14,9 +14,15 @@
           </div>
         </div>
 
-        <div class="space-y-2">
+        <div class="space-y-2 mb-4">
           <div class="h-4 bg-gray-200 rounded"></div>
           <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+        </div>
+
+        <div class="flex space-x-4 pt-8">
+          <div class="h-3 bg-gray-300 rounded w-1/3"></div>
+          <div class="h-3 bg-gray-300 rounded w-1/3"></div>
+          <div class="h-3 bg-gray-300 rounded w-1/3"></div>
         </div>
       </div>
     </div>
