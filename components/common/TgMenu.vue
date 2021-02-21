@@ -1,5 +1,5 @@
 <template>
-  <div class="relative" @click="visible = !visible">
+  <div class="relative z-10" @click="visible = !visible">
     <slot></slot>
     <transition
       enter-active-class="ransition ease-out duration-100"
