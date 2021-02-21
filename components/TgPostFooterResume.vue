@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="likes.quantity + comments.quantity"
-    class="flex justify-between px-4 pt-4"
+    class="flex justify-between p-4"
   >
     <div class="flex">
       <div v-if="likes.quantity > 0" class="flex">
