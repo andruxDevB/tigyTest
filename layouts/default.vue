@@ -9,11 +9,7 @@
         class="flex-1 relative overflow-y-auto focus:outline-none"
         tabindex="0"
       >
-        <div class="p-6">
-          <div class="container">
-            <div class="mx-auto max-w-xl"><Nuxt /></div>
-          </div>
-        </div>
+        <Nuxt />
       </main>
     </div>
   </div>
