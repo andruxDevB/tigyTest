@@ -21,5 +21,8 @@ export default {
       contacts: 'messenger/contacts',
     }),
   },
+  async mounted() {
+    await this.$store.dispatch('messenger/getContacts')
+  },
 }
 </script>
