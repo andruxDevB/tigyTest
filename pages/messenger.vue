@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  layout: 'messenger',
   async fetch() {
     await this.$store.dispatch('messenger/getContacts')
   },
