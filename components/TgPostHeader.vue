@@ -4,17 +4,7 @@
   >
     <div class="flex items-center space-x-5">
       <div class="flex-shrink-0">
-        <div class="relative">
-          <img
-            class="h-11 w-11 rounded-full"
-            :src="user.image"
-            :alt="user.full_name"
-          />
-          <span
-            class="absolute inset-0 shadow-inner rounded-full"
-            aria-hidden="true"
-          ></span>
-        </div>
+        <tg-avatar :image="user.image" :alt="user.full_name"></tg-avatar>
       </div>
       <div>
         <h1 class="text-gray-500">

@@ -64,11 +64,10 @@
               class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-pink-500"
             >
               <div class="flex-shrink-0">
-                <img
-                  class="h-10 w-10 rounded-full"
-                  :src="contact.image"
+                <tg-avatar
+                  :image="contact.image"
                   :alt="contact.full_name"
-                />
+                ></tg-avatar>
               </div>
               <div class="flex-1 min-w-0">
                 <NuxtLink

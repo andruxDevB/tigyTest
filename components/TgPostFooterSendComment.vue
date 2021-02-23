@@ -1,15 +1,14 @@
 <template>
   <div class="p-4 flex space-x-4 items-center rounded-b bg-gray-50">
     <div class="flex-shrink-0">
-      <img class="h-8 w-8 rounded-full" :src="user.foto" :alt="user.nameuser" />
+      <tg-avatar :image="user.foto" :alt="user.nameuser" size="md"></tg-avatar>
     </div>
 
     <div class="flex-auto">
       <div class="relative rounded-md shadow-sm">
         <input
-          id="comment"
           type="text"
-          name="account_number"
+          name="comment"
           class="focus:ring-indigo-500 border focus:border-purple-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md"
           placeholder="Deja un comentario"
         />
