@@ -1,6 +1,9 @@
 <template>
   <slider animation="fade">
-    <slider-item v-for="virtue in virtues" :key="`virtue-slide-${virtue.id}`">
+    <slider-item
+      v-for="(virtue, index) in virtues"
+      :key="`virtue-slide-${virtue.id}-${index}`"
+    >
       <div class="relative h-full">
         <h2 class="text-white absolute top-4 left-4 text-4xl">
           {{ virtue.descripcion }}
