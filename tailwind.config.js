@@ -1,7 +1,14 @@
 module.exports = {
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/ui')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/ui'),
+    require('tailwindcss-blend-mode')(),
+  ],
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    mixBlendMode: ['responsive'],
+    backgroundBlendMode: ['responsive'],
+    isolation: ['responsive'],
   },
   theme: {
     extend: {

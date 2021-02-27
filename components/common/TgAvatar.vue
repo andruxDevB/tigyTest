@@ -38,6 +38,8 @@ export default {
       sizeClass: {
         md: 'h-8 w-8',
         lg: 'h-10 w-10',
+        xl: 'h-12 w-12',
+        '6xl': 'h-36 w-36',
       },
     }
   },

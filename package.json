@@ -46,6 +46,7 @@
     "sass": "^1.32.8",
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "tailwindcss-blend-mode": "^1.0.0"
   }
 }
