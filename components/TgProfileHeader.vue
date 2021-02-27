@@ -48,7 +48,7 @@ export default {
     },
     image: {
       type: String,
-      required: true,
+      default: '',
     },
     color: {
       type: String,

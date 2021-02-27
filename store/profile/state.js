@@ -4,4 +4,6 @@ export default () => ({
     personales: {},
     ubicacion: {},
   },
+  stats: { ranking: {} },
+  user: {},
 })
