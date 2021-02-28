@@ -33,8 +33,10 @@ export default {
     '~/plugins/i18n.js',
     '~/plugins/axios.js',
     '~/plugins/lodash.js',
+    '~/plugins/filters.js',
     '~/plugins/v-tooltip.js',
     '~/plugins/vee-validate.js',
+    '~/plugins/vue-svg-gauge.js',
     '~/plugins/vue-easy-slider.js',
   ],
 
