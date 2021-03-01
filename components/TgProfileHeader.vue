@@ -1,11 +1,15 @@
 <template>
   <div>
-    <div class="border-gray-200 border-b" :style="`background-color: ${bg}`">
-      <h1
-        class="absolute z-10 text-white right-6 h-32 lg:h-48 text-5xl sm:text-6xl uppercase font-bold opacity-50"
+    <div
+      class="border-gray-200 border-b relative"
+      :style="`background-color: ${bg}`"
+    >
+      <h2
+        class="z-10 absolute text-right z-10 right-6 -bottom-10 text-white text-5xl sm:text-6xl uppercase font-bold opacity-50"
       >
-        {{ title }}
-      </h1>
+        {{ subTitle }}
+      </h2>
+
       <img
         class="h-32 w-full object-cover lg:h-48 blend-multiply"
         src="/bg-profile.png"
@@ -63,6 +67,10 @@ export default {
       default: '',
     },
     title: {
+      type: String,
+      default: '',
+    },
+    subTitle: {
       type: String,
       default: '',
     },

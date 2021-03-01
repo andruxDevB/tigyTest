@@ -9,4 +9,24 @@ export default {
       console.error(e)
     }
   },
+  async getGraphByUserId({ commit }) {
+    try {
+      const userId = this.$auth.user.user_id
+      const response = await this.$api.$get(`/vgraficos/${userId}`)
+      const graph = response.data.graficos
+
+      return {
+        values: {
+          labels: JSON.parse(graph.actitudes_labels),
+          datasets: [
+            {
+              data: JSON.parse(graph.actitudes_datos),
+            },
+          ],
+        },
+      }
+    } catch (e) {
+      console.error(e)
+    }
+  },
 }

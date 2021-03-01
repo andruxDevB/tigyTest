@@ -35,6 +35,7 @@ export default {
     '~/plugins/lodash.js',
     '~/plugins/filters.js',
     '~/plugins/v-tooltip.js',
+    '~/plugins/vue-charts.js',
     '~/plugins/vee-validate.js',
     '~/plugins/vue-svg-gauge.js',
     '~/plugins/vue-easy-slider.js',

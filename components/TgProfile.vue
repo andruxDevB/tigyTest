@@ -11,7 +11,8 @@
           :image="user.foto"
           :bg="stats.ranking.fondo"
           :color="stats.ranking.color"
-          :title="stats.ranking.significado"
+          :title="stats.ranking.nivel"
+          :sub-title="stats.ranking.significado"
         />
         <!-- Tabs -->
         <tg-tab-navigation :items="navigation"></tg-tab-navigation>
