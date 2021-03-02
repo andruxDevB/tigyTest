@@ -17,10 +17,12 @@ export default {
 
       return {
         values: {
-          labels: JSON.parse(graph.actitudes_labels),
+          labels: JSON.parse(graph.actitudes_labels.replace(/'/g, '"')),
           datasets: [
             {
-              data: JSON.parse(graph.actitudes_datos),
+              data: JSON.parse(graph.actitudes_datos.replace(/'/g, '"')),
+              backgroundColor: 'rgba(74,169,210,0.5)',
+              borderColor: 'rgba(74,169,210,0.9)',
             },
           ],
         },

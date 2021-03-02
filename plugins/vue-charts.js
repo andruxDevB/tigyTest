@@ -1,10 +1,12 @@
 import Vue from 'vue'
-import { Radar } from 'vue-chartjs'
+import { Radar, mixins } from 'vue-chartjs'
+const { reactiveProp } = mixins
 
 const registerComponent = function (name, originalComponent) {
   Vue.component(name, {
     extends: originalComponent,
-    props: ['data', 'options', 'styles'],
+    mixins: [reactiveProp],
+    props: ['chart-data', 'options', 'styles'],
     mounted() {
       this.renderChart(this.data, this.options)
     },
