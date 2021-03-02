@@ -26,6 +26,16 @@ export default {
             },
           ],
         },
+        coins: {
+          labels: JSON.parse(graph.monedas_labels.replace(/'/g, '"')),
+          datasets: [
+            {
+              data: JSON.parse(graph.monedas_datos.replace(/'/g, '"')),
+              backgroundColor: 'rgba(157,96,251,0.5)',
+              borderColor: 'rgba(157,96,251,0.9)',
+            },
+          ],
+        },
       }
     } catch (e) {
       console.error(e)

@@ -9,8 +9,12 @@
         ></radar-chart>
       </tg-profile-id-stats-item>
       <tg-profile-id-stats-item>
-        <template #title> Gratitud</template>
-        <div>gratitud</div>
+        <template #title> Saldo monedas</template>
+        <line-chart
+          class="mt-5"
+          :chart-data="data.coins"
+          :options="radarOptions"
+        ></line-chart>
       </tg-profile-id-stats-item>
     </dl>
   </div>

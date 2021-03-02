@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Radar, mixins } from 'vue-chartjs'
+import { Radar, Line, mixins } from 'vue-chartjs'
 const { reactiveProp } = mixins
 
 const registerComponent = function (name, originalComponent) {
@@ -14,3 +14,4 @@ const registerComponent = function (name, originalComponent) {
 }
 
 registerComponent('RadarChart', Radar)
+registerComponent('LineChart', Line)
