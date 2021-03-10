@@ -1,3 +1,5 @@
+import { map } from 'lodash'
+
 export default {
   async getByUserId({ commit }, payload) {
     try {
@@ -17,20 +19,20 @@ export default {
 
       return {
         values: {
-          labels: JSON.parse(graph.actitudes_labels.replace(/'/g, '"')),
+          labels: map(graph.actitudes.info, 'label'),
           datasets: [
             {
-              data: JSON.parse(graph.actitudes_datos.replace(/'/g, '"')),
+              data: map(graph.actitudes.info, 'valor'),
               backgroundColor: 'rgba(74,169,210,0.5)',
               borderColor: 'rgba(74,169,210,0.9)',
             },
           ],
         },
         coins: {
-          labels: JSON.parse(graph.monedas_labels.replace(/'/g, '"')),
+          labels: map(graph.monedas.info, 'label'),
           datasets: [
             {
-              data: JSON.parse(graph.monedas_datos.replace(/'/g, '"')),
+              data: map(graph.monedas.info, 'valor'),
               backgroundColor: 'rgba(157,96,251,0.5)',
               borderColor: 'rgba(157,96,251,0.9)',
             },

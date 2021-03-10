@@ -185,11 +185,7 @@ export default {
     ...mapMutations({
       sidebarToggle: 'help/TOGGLE_SIDEBAR',
     }),
-    async submit() {
-      const isValid = await this.$refs.observer.validate()
-      // this.getCountries()
-      // console.log(isValid)
-    },
+    async submit() {},
     async getCountries() {
       this.countryList = await this.$store.dispatch('location/getCountryList')
     },

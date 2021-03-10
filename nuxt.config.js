@@ -9,6 +9,8 @@ export default {
   target: 'static',
   env: {
     API_URL: process.env.API_URL,
+    PUSHER_KEY: process.env.PUSHER_KEY,
+    PUSHER_CLUSTER: process.env.PUSHER_CLUSTER,
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -57,6 +59,15 @@ export default {
     '@nuxt-hero-icons/solid/nuxt',
     // https://github.com/nuxt-community/moment-module
     '@nuxtjs/moment',
+    [
+      '@nuxtjs/laravel-echo',
+      {
+        broadcaster: 'pusher',
+        key: process.env.PUSHER_KEY,
+        cluster: process.env.PUSHER_CLUSTER,
+        forceTLS: true,
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

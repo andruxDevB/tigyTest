@@ -60,5 +60,13 @@ export default {
         : 'sender'
     },
   },
+  mounted() {
+    console.log('test_mounted')
+    this.$echo
+      .channel('chat_registro')
+      .listen('App\\Events\\ChatEvent', (res) => {
+        console.log(res)
+      })
+  },
 }
 </script>
