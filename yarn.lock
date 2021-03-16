@@ -1956,6 +1956,11 @@ acorn@^7.0.0, acorn@^7.1.1, acorn@^7.4.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
+
 aggregate-error@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.1.0.tgz#92670ff50f5359bdb7a3e0d40d0ec30c5737687a"
@@ -6679,6 +6684,16 @@ nuxt-i18n@^6.20.0:
     klona "^2.0.4"
     vue-i18n "^8.18.1"
 
+nuxt-tailvue@^1.0.68:
+  version "1.0.68"
+  resolved "https://registry.yarnpkg.com/nuxt-tailvue/-/nuxt-tailvue-1.0.68.tgz#e0138cfcae2b33d28f4ec723c941fc792c1c3620"
+  integrity sha512-tFJU4VvXJTE2EechHzYDIQ5dkZPmZnwLTmpJIY5g3ZpZm3mfxkPdp7eu2evJ3pbFO9vOrtlqbtWm9502tJ+LHw==
+  dependencies:
+    tv-button "^1.0.7"
+    tv-icon "^1.0.6"
+    tv-modal "^1.0.3"
+    tv-toast "^1.2.4"
+
 nuxt@^2.14.12:
   version "2.14.12"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.14.12.tgz#836096ff62ba72554b73744d94f5547109e563f7"
@@ -9555,6 +9570,31 @@ tty-browserify@0.0.0:
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
 
+tv-button@^1.0.7:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/tv-button/-/tv-button-1.0.21.tgz#9122ad7deda95373edc5040d45e13443cdedab16"
+  integrity sha512-i//WUkW3ffBRpM0app/eUEy3sJMVkKjdPeQVe5BxsInYQ9wkCnsTl7CfqDEh3xjpHLuFclywSZkQL/lA4eCdNQ==
+
+tv-icon@^1.0.1, tv-icon@^1.0.6:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/tv-icon/-/tv-icon-1.0.19.tgz#c820f96531c2cc1e6b7ce92a4b05f5d1f61d1f1e"
+  integrity sha512-4MMEiEf3qDVwdwT62HXO6uQLqPG0+Uoqy7DvoX1ccOsTsE6ETdTLS14cRXbblDAxNLMqEEQDkYJlOI7j5qf24w==
+
+tv-modal@^1.0.3:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/tv-modal/-/tv-modal-1.0.20.tgz#d4cf842e87d800c9374d4f45ae1e80dd41ce9133"
+  integrity sha512-f64ZqyjeUUmAc8oo4N30dCjsoOMRRwXErkS6paKKT0M52O6VYhi2w0YchjFbCCk5RxhziPbY+yqpBrse5z4T9w==
+  dependencies:
+    tv-button "^1.0.7"
+    tv-icon "^1.0.1"
+
+tv-toast@^1.2.4:
+  version "1.2.28"
+  resolved "https://registry.yarnpkg.com/tv-toast/-/tv-toast-1.2.28.tgz#60b1f73c471717a16d8ac8881cb7dce73c636af8"
+  integrity sha512-ljRIx8AR5n7mkLdf2LGkOubPgcgXmljcpoWj20XRedGSM/6dIfM5gCzISyx2gu3l185skaIfEEc6JIkdMl3TNw==
+  dependencies:
+    tv-icon "^1.0.1"
+
 tweetnacl@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
@@ -10328,6 +10368,11 @@ yargs@^15.3.1:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+yarn@^1.22.10:
+  version "1.22.10"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+  integrity sha512-IanQGI9RRPAN87VGTF7zs2uxkSyQSrSPsju0COgbsKQOOXr5LtcVPeyXWgwVa0ywG3d8dg6kSYKGBuYK021qeA==
 
 ylru@^1.2.0:
   version "1.2.1"

@@ -43,4 +43,14 @@ export default {
       console.error(e)
     }
   },
+  async updateAccount({ commit }, payload) {
+    try {
+      const response = await this.$api.$put(`/cuenta/cambio`, payload)
+      const account = response.data.cuenta
+      commit('SET_ACCOUNT', account)
+      return profile
+    } catch (e) {
+      console.error(e)
+    }
+  },
 }

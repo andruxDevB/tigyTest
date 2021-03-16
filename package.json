@@ -20,18 +20,21 @@
     "@nuxtjs/svg": "^0.1.12",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/ui": "^0.7.2",
+    "add": "^2.0.6",
     "chart.js": "^2.9.4",
     "core-js": "^3.8.3",
     "lodash": "^4.17.20",
     "nuxt": "^2.14.12",
     "nuxt-i18n": "^6.20.0",
+    "nuxt-tailvue": "^1.0.68",
     "pusher-js": "^7.0.3",
     "v-tooltip": "^2.1.2",
     "vee-validate": "^3.4.5",
     "vue-autosuggest": "^2.2.0",
     "vue-chartjs": "^3.5.1",
     "vue-easy-slider": "^5.3.4",
-    "vue-lodash": "^2.1.2"
+    "vue-lodash": "^2.1.2",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",

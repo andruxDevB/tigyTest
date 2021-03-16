@@ -8,6 +8,7 @@ export default function ({ store, $axios }, inject) {
     if (store.$auth.loggedIn) {
       const token = store.$auth.strategy.token.get()
       api.setHeader('Authorization', token)
+      api.setHeader('Origen', 'F')
     }
     return config
   })

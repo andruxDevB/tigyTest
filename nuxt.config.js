@@ -76,6 +76,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/svg',
     '@nuxtjs/auth-next',
+    ['nuxt-tailvue', { toast: true }],
     [
       'nuxt-i18n',
       {

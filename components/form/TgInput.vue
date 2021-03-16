@@ -11,6 +11,7 @@
         :value="value"
         :class="[baseClass, activeClass]"
         :aria-invalid="isInvalid"
+        :placeholder="placeholder"
         @input="$emit('input', $event.target.value)"
       />
       <transition>
@@ -54,6 +55,10 @@ export default {
     errors: {
       type: Array,
       default: () => [],
+    },
+    placeholder: {
+      type: String,
+      default: '',
     },
   },
   data() {
