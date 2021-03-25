@@ -48,7 +48,7 @@ export default {
       const response = await this.$api.$put(`/cuenta/cambio`, payload)
       const account = response.data.cuenta
       commit('SET_ACCOUNT', account)
-      return profile
+      return account
     } catch (e) {
       console.error(e)
     }

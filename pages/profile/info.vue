@@ -38,7 +38,7 @@
 
       <div class="col-span-6 sm:col-span-6 lg:col-span-3">
         <tg-select
-          v-model="profile.personales.pais_id"
+          v-model="user.pais_id"
           name="country"
           value-key="id"
           label-key="nombre_pais"
@@ -189,6 +189,7 @@ export default {
       profession: [],
       profile: { adicionales: {}, personales: {}, ubicacion: {} },
       loading: false,
+      user: {},
     }
   },
 
@@ -208,13 +209,15 @@ export default {
   computed: {
     ...mapGetters({
       profileInfo: 'profile/account',
+      profileUser: 'profile/user',
     }),
   },
   watch: {
     profileInfo() {
       this.profile = cloneDeep(this.profileInfo)
+      this.user = cloneDeep(this.profileUser)
     },
-    async 'profile.personales.pais_id'(val) {
+    async 'user.pais_id'(val) {
       this.proviceList = await this.$store.dispatch(
         'catalogs/getProvincesByCountryId',
         { countryId: val }
@@ -223,7 +226,7 @@ export default {
     async 'profile.adicionales.provincia_id'(val) {
       this.cityList = await this.$store.dispatch(
         'catalogs/getCitiesByCountryAndProvinceId',
-        { countryId: this.profile.personales.pais_id, provinceId: val }
+        { countryId: this.user.pais_id, provinceId: val }
       )
     },
   },
