@@ -6,7 +6,7 @@
       :item="item"
     />
     <a
-      href="#"
+      href="javascript:void(0)"
       class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
       @click="logout()"
     >
