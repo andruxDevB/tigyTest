@@ -55,8 +55,11 @@ export default {
   },
   async getTransactions({ commit }, payload) {
     try {
+      console.log(payload)
       const userId = this.$auth.user.user_id
-      const response = await this.$api.$get(`/monedas/${userId}`, payload)
+      const response = await this.$api.$get(`/monedas/${userId}`, {
+        params: payload,
+      })
       const transactions = response.data.monedas
       return transactions
     } catch (e) {

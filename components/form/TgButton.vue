@@ -1,5 +1,8 @@
 <template>
-  <button :class="[baseClass, buttonClass, customClass]" :disabled="loading">
+  <button
+    :class="[baseClass, buttonClass, customClass]"
+    :disabled="loading || disabled"
+  >
     <svg
       v-if="loading"
       class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
@@ -40,6 +43,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -56,7 +63,8 @@ export default {
           'text-white hover:bg-purple-700 bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-sm',
         flat:
           'text-gray-500 hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500',
-        // icon: 'text-gray-400 group-hover:text-gray-500',
+        outline:
+          'border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50',
       },
     }
   },
