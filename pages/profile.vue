@@ -8,7 +8,7 @@ export default {
     return {
       navigation: [
         { label: 'Tigy ID', link: '/profile' },
-        { label: 'Tigy Line', link: '/profile/timeline' },
+        // { label: 'Tigy Line', link: '/profile/timeline' },
         { label: 'Información personal', link: '/profile/info' },
         { label: 'Transacciones', link: '/profile/transactions' },
       ],
