@@ -17,5 +17,8 @@ export default {
       ],
     }
   },
+  async fetch() {
+    await this.$store.dispatch('friends/getWithGroups')
+  },
 }
 </script>
