@@ -4,36 +4,39 @@
       <div class="flex-1 truncate">
         <div class="flex items-center space-x-3">
           <h3 class="text-gray-900 text-sm font-medium truncate">
-            {{ friend.full_name }}
+            {{ title }}
           </h3>
-          <span
-            class="flex-shrink-0 inline-block px-2 py-0.5 text-xs font-medium rounded-full"
-            :style="{
-              color: friend.ranking_info.color,
-              background: friend.ranking_info.fondo,
-            }"
-            >{{ friend.ranking_info.nivel }}</span
-          >
+          <slot name="badge"></slot>
         </div>
         <p class="mt-1 text-gray-500 text-sm truncate">
-          Amigos desde hace {{ $moment(friend.created_at.date).toNow(true) }}
+          {{ subTitle }}
         </p>
       </div>
       <img
+        v-if="avatar"
         class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"
-        :src="friend.image"
-        :alt="friend.full_name"
+        :src="avatar"
+        :alt="title"
       />
     </div>
+    <slot name="actions"></slot>
   </li>
 </template>
 <script>
 export default {
   name: 'TgFriendsItem',
   props: {
-    friend: {
-      type: Object,
+    title: {
+      type: String,
       required: true,
+    },
+    subTitle: {
+      type: String,
+      required: true,
+    },
+    avatar: {
+      type: String,
+      default: null,
     },
   },
 }

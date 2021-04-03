@@ -32,7 +32,17 @@
         <tg-friends-item
           v-for="(friend, i) in group.friends"
           :key="`friend-card-${i}`"
-          :friend="friend"
+          :title="friend.full_name"
+          :sub-title="`Amigos desde hace ${$moment(
+            friend.created_at.date
+          ).toNow(true)}`"
+          :avatar="friend.image"
+          ><template #badge>
+            <tg-friends-level-badge
+              :color="friend.ranking_info.color"
+              :bg="friend.ranking_info.fondo"
+              :level="friend.ranking_info.nivel"
+            ></tg-friends-level-badge> </template
         ></tg-friends-item>
       </ul>
     </div>

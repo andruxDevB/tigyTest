@@ -15,6 +15,7 @@ import HomeIcon from '@nuxt-hero-icons/outline/src/components/HomeIcon'
 import UserCircle from '@nuxt-hero-icons/outline/src/components/UserCircleIcon'
 import UserGroup from '@nuxt-hero-icons/outline/src/components/UserGroupIcon'
 import Support from '@nuxt-hero-icons/outline/src/components/SupportIcon'
+import Chat from '@nuxt-hero-icons/outline/src/components/ChatIcon'
 
 export default {
   name: 'TgSidebarMenuNav',
@@ -23,6 +24,7 @@ export default {
     UserCircle,
     UserGroup,
     Support,
+    Chat,
   },
   props: {
     item: {

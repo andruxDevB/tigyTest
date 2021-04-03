@@ -17,6 +17,11 @@ export default () => ({
       icon: 'UserGroup',
     },
     {
+      label: 'Conversaciones',
+      link: '/messenger',
+      icon: 'Chat',
+    },
+    {
       label: 'Soporte',
       link: '/support',
       icon: 'Support',
