@@ -22,5 +22,10 @@ export default {
       this.$store.dispatch('friends/requests/getReceived'),
     ])
   },
+  head() {
+    return {
+      title: 'Solicitudes de amistad',
+    }
+  },
 }
 </script>

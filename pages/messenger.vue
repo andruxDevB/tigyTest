@@ -15,5 +15,10 @@ export default {
   async fetch() {
     await this.$store.dispatch('messenger/getContacts')
   },
+  head() {
+    return {
+      title: 'Conversaciones',
+    }
+  },
 }
 </script>

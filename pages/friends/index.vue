@@ -11,5 +11,10 @@ export default {
   async fetch() {
     this.friends = await this.$store.dispatch('friends/getList')
   },
+  head() {
+    return {
+      title: 'Mi amigos',
+    }
+  },
 }
 </script>

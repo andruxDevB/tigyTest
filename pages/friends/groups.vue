@@ -11,5 +11,10 @@ export default {
   async fetch() {
     this.groups = await this.$store.dispatch('friends/getGroups')
   },
+  head() {
+    return {
+      title: 'Mi grupos',
+    }
+  },
 }
 </script>

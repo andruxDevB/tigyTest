@@ -18,5 +18,10 @@ export default {
     const userId = this.$auth.user.user_id
     await this.$store.dispatch('profile/getByUserId', { userId })
   },
+  head() {
+    return {
+      title: 'Mi perfil',
+    }
+  },
 }
 </script>

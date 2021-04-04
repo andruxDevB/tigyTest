@@ -4,25 +4,25 @@
       <template #title> Datos personales </template>
       <template #subTitle> Completa la informacion de tu perfil </template>
       <div class="col-span-6 sm:col-span-3">
-        <tg-input v-model="profile.personales.nombres" name="nombres">
+        <form-tg-input v-model="profile.personales.nombres" name="nombres">
           Nombres
-        </tg-input>
+        </form-tg-input>
       </div>
 
       <div class="col-span-6 sm:col-span-3">
-        <tg-input v-model="profile.personales.apellidos" name="apellidos">
+        <form-tg-input v-model="profile.personales.apellidos" name="apellidos">
           Apellidos
-        </tg-input>
+        </form-tg-input>
       </div>
 
       <div class="col-span-6 sm:col-span-3">
-        <tg-input
+        <form-tg-input
           v-model="profile.personales.fecha_nace"
           name="fecha_nace"
           type="date"
         >
           Fecha de nacimiento
-        </tg-input>
+        </form-tg-input>
       </div>
 
       <div class="col-span-6 sm:col-span-3">
@@ -74,33 +74,33 @@
       <template #title> Perfil profesional</template>
       <template #subTitle> Cuenta un poco mas sobre tí </template>
       <div class="sm:col-span-6">
-        <tg-input
+        <form-tg-input
           v-model="profile.adicionales.ocupacion"
           name="ocupacion"
           placeholder="Ej: Programador"
         >
           Ocupación
-        </tg-input>
+        </form-tg-input>
       </div>
 
       <div class="sm:col-span-6">
-        <tg-input
+        <form-tg-input
           v-model="profile.adicionales.hobby"
           name="hobby"
           placeholder="Ej: Escuchar música"
         >
           Hobby
-        </tg-input>
+        </form-tg-input>
       </div>
 
       <div class="sm:col-span-6">
-        <tg-input
+        <form-tg-input
           v-model="profile.adicionales.frase"
           name="frase"
           placeholder="Ej: Excel, coaching, networking y mas cosas con las que puedes ayudar en la red"
         >
           ¿Comó puedes ayudar a tu red?
-        </tg-input>
+        </form-tg-input>
       </div>
 
       <div class="col-span-6 sm:col-span-3">
@@ -130,47 +130,50 @@
       <template #title> Información de contacto</template>
       <template #subTitle>¿Cómo se pueden comunicar contigo?</template>
       <div class="col-span-6 sm:col-span-3">
-        <tg-input v-model="profile.ubicacion.dir_correo1" name="dir_correo1">
+        <form-tg-input
+          v-model="profile.ubicacion.dir_correo1"
+          name="dir_correo1"
+        >
           Email
-        </tg-input>
+        </form-tg-input>
       </div>
 
       <div class="col-span-6 sm:col-span-3">
-        <tg-input v-model="profile.ubicacion.telef_cel1" name="telef_cel1">
+        <form-tg-input v-model="profile.ubicacion.telef_cel1" name="telef_cel1">
           Celular
-        </tg-input>
+        </form-tg-input>
       </div>
       <div class="sm:col-span-6">
-        <tg-input
+        <form-tg-input
           v-model="profile.ubicacion.red_social1"
           name="facebook"
           placeholder="Nombre en Facebook"
         >
           Facebook
-        </tg-input>
+        </form-tg-input>
       </div>
       <div class="sm:col-span-6">
-        <tg-input
+        <form-tg-input
           v-model="profile.ubicacion.red_social2"
           name="twitter"
           placeholder="@nombre de usuario"
         >
           Twitter
-        </tg-input>
+        </form-tg-input>
       </div>
       <div class="sm:col-span-6">
-        <tg-input
+        <form-tg-input
           v-model="profile.ubicacion.red_social3"
           name="linkedin"
           placeholder="Url de LinkedIn"
         >
           LinkedIn
-        </tg-input>
+        </form-tg-input>
       </div>
     </tg-profile-info-section>
 
     <div class="flex justify-end">
-      <tg-button :loading="loading">Guardar</tg-button>
+      <form-tg-button :loading="loading">Guardar</form-tg-button>
     </div>
   </form>
 </template>

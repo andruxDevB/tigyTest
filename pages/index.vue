@@ -35,5 +35,10 @@ export default {
   async fetch() {
     this.events = await this.$store.dispatch('timeline/get')
   },
+  head() {
+    return {
+      title: 'Bienvenido',
+    }
+  },
 }
 </script>
