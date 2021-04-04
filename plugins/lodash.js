@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import map from 'lodash/map'
 import head from 'lodash/head'
 import chain from 'lodash/chain'
+import chunk from 'lodash/chunk'
 import value from 'lodash/value'
 import random from 'lodash/random'
 import findKey from 'lodash/findKey'
@@ -21,6 +22,7 @@ Vue.use(VueLodash, {
     map,
     head,
     chain,
+    chunk,
     value,
     random,
     findKey,

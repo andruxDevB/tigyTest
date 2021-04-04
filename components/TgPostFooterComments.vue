@@ -4,11 +4,11 @@
       <li v-for="item in comments" :key="`post-comment-${item.id}`">
         <div class="flex space-x-3">
           <div class="flex-shrink-0">
-            <tg-avatar
+            <common-tg-avatar
               :image="item.user.image"
               :alt="item.user.image.full_name"
               size="md"
-            ></tg-avatar>
+            ></common-tg-avatar>
           </div>
           <div>
             <div class="text-sm text-gray-700 bg-gray-200 p-2 rounded-md">

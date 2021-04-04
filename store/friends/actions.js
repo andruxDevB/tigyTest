@@ -1,12 +1,20 @@
 export default {
-  async getWithGroups({ commit }, payload) {
+  async getList({ commit }, payload) {
     try {
       const userId = this.$auth.user.user_id
       const response = await this.$api.$get(`/lamigos/${userId}`)
-      const friends = response.data.lamigos.amigos
-      commit('SET_FRIENDS', response.data.lamigos.amigos)
-      commit('SET_GROUPS', response.data.lamigos.dgrupos)
-      return friends
+      const connections = response.data.lamigos.amigos
+      return connections
+    } catch (e) {
+      console.error(e)
+    }
+  },
+  async getGroups({ commit }, payload) {
+    try {
+      const userId = this.$auth.user.user_id
+      const response = await this.$api.$get(`/grupos/${userId}`)
+      const groups = response.data.groups
+      return groups
     } catch (e) {
       console.error(e)
     }

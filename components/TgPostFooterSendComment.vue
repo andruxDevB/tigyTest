@@ -1,7 +1,11 @@
 <template>
   <div class="p-4 flex space-x-4 items-center rounded-b bg-gray-50">
     <div class="flex-shrink-0">
-      <tg-avatar :image="user.foto" :alt="user.nameuser" size="md"></tg-avatar>
+      <common-tg-avatar
+        :image="user.foto"
+        :alt="user.nameuser"
+        size="md"
+      ></common-tg-avatar>
     </div>
 
     <div class="flex-auto">

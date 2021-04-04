@@ -4,7 +4,10 @@
   >
     <div class="flex items-center space-x-5">
       <div class="flex-shrink-0">
-        <tg-avatar :image="user.image" :alt="user.full_name"></tg-avatar>
+        <common-tg-avatar
+          :image="user.image"
+          :alt="user.full_name"
+        ></common-tg-avatar>
       </div>
       <div>
         <h1 class="text-gray-500">

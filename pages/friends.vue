@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tg-tab-navigation :items="navigation"></tg-tab-navigation>
+    <common-tg-tab-navigation :items="navigation"></common-tg-tab-navigation>
     <div class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
       <nuxt-child></nuxt-child>
     </div>
@@ -16,9 +16,6 @@ export default {
         { label: 'Grupos', link: '/friends/groups' },
       ],
     }
-  },
-  async fetch() {
-    await this.$store.dispatch('friends/getWithGroups')
   },
 }
 </script>

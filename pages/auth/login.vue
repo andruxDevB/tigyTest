@@ -26,12 +26,12 @@
         name="email"
         slim
       >
-        <tg-input
+        <form-tg-input
           v-model="auth.login"
           type="email"
           name="email"
           :errors="errors"
-          >Email</tg-input
+          >Email</form-tg-input
         >
       </ValidationProvider>
       <ValidationProvider
@@ -40,12 +40,12 @@
         name="contraseña"
         slim
       >
-        <tg-input
+        <form-tg-input
           v-model="auth.password"
           type="password"
           name="password"
           :errors="errors"
-          >Contraseña</tg-input
+          >Contraseña</form-tg-input
         >
       </ValidationProvider>
 
@@ -61,9 +61,9 @@
       </div>
 
       <div>
-        <tg-button custom-class="w-full" :loading="loading">
+        <form-tg-button custom-class="w-full" :loading="loading">
           Inicia sesión
-        </tg-button>
+        </form-tg-button>
       </div>
     </ValidationObserver>
   </div>
@@ -71,6 +71,7 @@
 
 <script>
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
+
 export default {
   components: {
     ValidationObserver,

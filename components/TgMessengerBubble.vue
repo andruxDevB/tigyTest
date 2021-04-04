@@ -5,13 +5,13 @@
       :key="`messenger-bubble-${contact.id}`"
       :to="`/messenger/${contact.gchat_id}`"
     >
-      <tg-avatar
+      <common-tg-avatar
         v-tooltip.left="contact.full_name"
         :image="contact.image"
         :alt="contact.full_name"
         size="xl"
         custom-class="shadow-lg mt-4 hover:shadow-2xl"
-      ></tg-avatar>
+      ></common-tg-avatar>
     </nuxt-link>
     <nuxt-link
       v-tooltip.left="'Todas las convesasiones '"

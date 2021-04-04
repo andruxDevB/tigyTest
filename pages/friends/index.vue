@@ -2,12 +2,14 @@
   <tg-friends :friends="friends"></tg-friends>
 </template>
 <script>
-import { mapGetters } from 'vuex'
 export default {
-  computed: {
-    ...mapGetters({
-      friends: 'friends/list',
-    }),
+  data() {
+    return {
+      friends: [],
+    }
+  },
+  async fetch() {
+    this.friends = await this.$store.dispatch('friends/getList')
   },
 }
 </script>

@@ -36,9 +36,6 @@
           <tg-profile-header-actions></tg-profile-header-actions>
         </div>
       </div>
-      <!--<div class="mt-6 min-w-0 flex-1">
-        <div><tg-badge :bg="bg" :color="color">Nivel Blanco</tg-badge></div>
-      </div>-->
     </div>
   </div>
 </template>

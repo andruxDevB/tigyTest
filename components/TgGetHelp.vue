@@ -104,13 +104,14 @@
                         name="recompenza"
                         slim
                       >
-                        <tg-button-group
+                        <form-tg-button-group
                           v-model="help.cantidad_id"
                           :items="rewards"
                           name="recompenza"
                           :errors="errors"
                         >
-                          Selecciona el valor de la recompenza</tg-button-group
+                          Selecciona el valor de la
+                          recompenza</form-tg-button-group
                         >
                       </ValidationProvider>
                       <ValidationProvider
