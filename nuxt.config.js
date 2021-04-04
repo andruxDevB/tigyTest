@@ -36,6 +36,7 @@ export default {
     '~/plugins/i18n.js',
     '~/plugins/axios.js',
     '~/plugins/lodash.js',
+    '~/plugins/helpers.js',
     '~/plugins/filters.js',
     '~/plugins/v-tooltip.js',
     '~/plugins/vue-charts.js',

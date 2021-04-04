@@ -1,10 +1,17 @@
 <template>
   <div class="flex justify-between flex-wrap px-4 py-2">
     <form-tg-button type="flat">
-      <outline-heart-icon
-        class="w-6 h-6 text-gray-400 mr-1 group-hover:text-gray-500"
+      <solid-heart-icon
+        v-if="liked"
+        class="w-6 h-6 mr-1 text-purple-500 group-hover:text-purple-700"
       />
-      <span class="hidden sm:inline-block"> Me gusta</span>
+      <outline-heart-icon
+        v-else
+        class="w-6 h-6 mr-1 text-gray-400 group-hover:text-gray-500"
+      />
+      <span :class="['hidden sm:inline-block', liked ? 'text-purple-500' : '']">
+        Me gusta</span
+      >
     </form-tg-button>
     <form-tg-button type="flat">
       <outline-hand-icon
@@ -36,12 +43,17 @@ export default {
   name: 'TgPostFooterActions',
   props: {
     likes: {
-      type: Object,
-      default: () => {},
+      type: Array,
+      default: () => [],
     },
     comments: {
       type: Object,
       default: () => {},
+    },
+  },
+  computed: {
+    liked() {
+      return !!this.$tg.events.like(this.likes, this.$auth.user.user_id)
     },
   },
 }

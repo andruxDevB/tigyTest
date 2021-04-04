@@ -4,7 +4,9 @@
       :likes="event.likes_info"
       :comments="event.comments_info"
     ></tg-post-footer-resume>
-    <tg-post-footer-actions></tg-post-footer-actions>
+    <tg-post-footer-actions
+      :likes="event.likes_info.likes"
+    ></tg-post-footer-actions>
     <tg-post-footer-comments
       :comments="event.comments_info.comments"
     ></tg-post-footer-comments>
