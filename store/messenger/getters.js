@@ -5,4 +5,7 @@ export default {
   thread(state) {
     return state.thread
   },
+  show(state) {
+    return state.show
+  },
 }

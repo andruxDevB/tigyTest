@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  layout: 'messenger',
+  // layout: 'messenger',
   async fetch() {
     await this.$store.dispatch('messenger/getContacts')
   },
@@ -19,6 +19,12 @@ export default {
     return {
       title: 'Conversaciones',
     }
+  },
+  mounted() {
+    this.$store.commit('messenger/SET_VISIBILITY', false)
+  },
+  destroyed() {
+    this.$store.commit('messenger/SET_VISIBILITY', true)
   },
 }
 </script>

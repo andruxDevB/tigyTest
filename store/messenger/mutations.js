@@ -1,4 +1,4 @@
-import { SET_CONTACTS, SET_THREAD, PUSH_MESSAGE } from './types'
+import { SET_CONTACTS, SET_THREAD, PUSH_MESSAGE, SET_VISIBILITY } from './types'
 
 export default {
   [SET_CONTACTS](state, payload) {
@@ -9,5 +9,8 @@ export default {
   },
   [PUSH_MESSAGE](state, payload) {
     state.thread.info.push(payload)
+  },
+  [SET_VISIBILITY](state, payload) {
+    state.show = payload
   },
 }

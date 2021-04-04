@@ -4,4 +4,5 @@ export default () => ({
     user: {},
     info: [],
   },
+  show: true,
 })
