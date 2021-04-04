@@ -24,21 +24,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import TgPostSkeleton from '~/components/TgPostSkeleton.vue'
+
 export default {
   components: { TgPostSkeleton },
-  data() {
-    return {
-      events: [],
-    }
-  },
   async fetch() {
-    this.events = await this.$store.dispatch('timeline/get')
+    await this.$store.dispatch('timeline/get')
   },
   head() {
     return {
       title: 'Bienvenido',
     }
+  },
+  computed: {
+    ...mapGetters({
+      events: 'timeline/events',
+    }),
   },
 }
 </script>

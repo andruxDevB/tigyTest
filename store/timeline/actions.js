@@ -9,7 +9,24 @@ export default {
       const response = await this.$api.$get(
         `/historias/${userId}/${days}/${limit}/${page}`
       )
-      return response.data.mired
+      const events = response.data.mired
+      commit('SET_EVENTS', events)
+      return events
+    } catch (e) {
+      console.error(e)
+    }
+  },
+  async like({ commit }, payload) {
+    try {
+      const { eventId } = payload
+
+      const params = {
+        user_id: this.$auth.user.user_id,
+        evento_id: eventId,
+      }
+
+      await this.$api.$post(`/gustas`, params)
+      // commit('SET_EVENTS', events)
     } catch (e) {
       console.error(e)
     }
