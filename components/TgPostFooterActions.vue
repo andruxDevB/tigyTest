@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between flex-wrap px-4 py-2">
-    <form-tg-button type="flat">
+    <form-tg-button type="flat" @click.native="like()">
       <solid-heart-icon
         v-if="liked"
         class="w-6 h-6 mr-1 text-purple-500 group-hover:text-purple-700"
@@ -50,10 +50,20 @@ export default {
       type: Object,
       default: () => {},
     },
+    eventId: {
+      type: Number,
+      required: true,
+    },
   },
-  computed: {
-    liked() {
-      return !!this.$tg.events.like(this.likes, this.$auth.user.user_id)
+  data() {
+    return {
+      liked: !!this.$tg.events.like(this.likes, this.$auth.user.user_id),
+    }
+  },
+  methods: {
+    like() {
+      this.liked = !this.liked
+      this.$store.dispatch('timeline/like', { eventId: this.eventId })
     },
   },
 }

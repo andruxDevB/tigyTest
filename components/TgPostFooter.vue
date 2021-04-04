@@ -5,6 +5,7 @@
       :comments="event.comments_info"
     ></tg-post-footer-resume>
     <tg-post-footer-actions
+      :event-id="event.evento_id"
       :likes="event.likes_info.likes"
     ></tg-post-footer-actions>
     <tg-post-footer-comments

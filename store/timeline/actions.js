@@ -26,7 +26,6 @@ export default {
       }
 
       await this.$api.$post(`/gustas`, params)
-      // commit('SET_EVENTS', events)
     } catch (e) {
       console.error(e)
     }
