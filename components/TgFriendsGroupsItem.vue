@@ -24,11 +24,35 @@
                 :alt="member.user.full_name"
               />
             </div>
-            <span
-              v-if="extraMembers > 0"
-              class="flex-shrink-0 text-xs leading-5 font-medium"
-              >+{{ extraMembers }}</span
-            >
+            <v-popover trigger="hover">
+              <span
+                v-if="extraMembers.length > 0"
+                class="flex-shrink-0 text-xs leading-5 font-medium"
+                >+{{ extraMembers.length }}</span
+              >
+              <template slot="popover">
+                <ul class="space-y-3">
+                  <li
+                    v-for="(member, index) in extraMembers"
+                    :key="`group-${group.id}-extra-member-${index}`"
+                    class="flex justify-start"
+                  >
+                    <div class="flex items-center space-x-3">
+                      <div class="flex-shrink-0">
+                        <img
+                          class="h-5 w-5 rounded-full ring-2 ring-white"
+                          :src="member.user.image"
+                          :alt="member.user.full_name"
+                        />
+                      </div>
+                      <div class="text-sm font-medium text-white">
+                        {{ member.user.full_name }}
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </template>
+            </v-popover>
           </div>
         </dd>
       </dl>
@@ -37,6 +61,7 @@
 </template>
 <script>
 import take from 'lodash/take'
+import slice from 'lodash/slice'
 
 export default {
   name: 'TgFriendsGroupsItem',
@@ -48,10 +73,10 @@ export default {
   },
   computed: {
     members() {
-      return take(this.group.group_info, 4)
+      return take(this.group.group_info, 5)
     },
     extraMembers() {
-      return this.group.group_info.length - this.members.length
+      return slice(this.group.group_info, this.members.length)
     },
   },
 }

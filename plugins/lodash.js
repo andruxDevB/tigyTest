@@ -6,6 +6,7 @@ import head from 'lodash/head'
 import take from 'lodash/take'
 import chain from 'lodash/chain'
 import value from 'lodash/value'
+import slice from 'lodash/slice'
 import random from 'lodash/random'
 import findKey from 'lodash/findKey'
 import groupBy from 'lodash/groupBy'
@@ -24,6 +25,7 @@ Vue.use(VueLodash, {
     take,
     chain,
     value,
+    slice,
     random,
     findKey,
     groupBy,
