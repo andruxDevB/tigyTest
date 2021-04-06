@@ -1,6 +1,6 @@
 <template>
   <div v-if="comments.length > 0" class="p-4">
-    <ul class="space-y-4">
+    <transition-group name="list" tag="ul" class="space-y-4">
       <li v-for="item in comments" :key="`post-comment-${item.id}`">
         <div class="flex space-x-3">
           <div class="flex-shrink-0">
@@ -22,7 +22,7 @@
           </div>
         </div>
       </li>
-    </ul>
+    </transition-group>
   </div>
 </template>
 <script>
@@ -36,3 +36,17 @@ export default {
   },
 }
 </script>
+<style lang="css">
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+</style>

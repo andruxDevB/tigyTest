@@ -12,6 +12,7 @@
       :comments="event.comments_info.comments"
     ></tg-post-footer-comments>
     <tg-post-footer-send-comment
+      :event-id="event.evento_id"
       :user="event.user"
     ></tg-post-footer-send-comment>
   </div>
