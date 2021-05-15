@@ -12,6 +12,7 @@ import findKey from 'lodash/findKey'
 import groupBy from 'lodash/groupBy'
 import orderBy from 'lodash/orderBy'
 import includes from 'lodash/includes'
+import debounce from 'lodash/debounce'
 import cloneDeep from 'lodash/cloneDeep'
 import isUndefined from 'lodash/isUndefined'
 
@@ -31,6 +32,7 @@ Vue.use(VueLodash, {
     groupBy,
     orderBy,
     includes,
+    debounce,
     cloneDeep,
     isUndefined,
   },

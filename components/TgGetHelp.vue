@@ -91,11 +91,11 @@
                         name="asunto"
                         slim
                       >
-                        <tg-textarea
+                        <form-tg-textarea
                           v-model="help.asunto"
                           name="asunto"
                           :errors="errors"
-                          >¿Que necesitas?</tg-textarea
+                          >¿Que necesitas?</form-tg-textarea
                         >
                       </ValidationProvider>
                       <ValidationProvider
@@ -120,16 +120,20 @@
                         name="privacidad"
                         slim
                       >
-                        <tg-drop-down
+                        <form-tg-drop-down
                           v-model="help.tipoayuda_id"
                           name="privacidad"
                           :items="privacy"
                           :errors="errors"
-                          >Privacidad</tg-drop-down
+                          >Privacidad</form-tg-drop-down
                         >
                       </ValidationProvider>
                     </div>
-                    <div class="pt-4 pb-6"></div>
+                    <div class="pt-4 pb-6">
+                      <tg-get-help-destination
+                        :destination-key="_.get(help.tipoayuda_id, 'key')"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

@@ -24,6 +24,7 @@
     "chart.js": "^2.9.4",
     "core-js": "^3.8.3",
     "lodash": "^4.17.20",
+    "lottie-web": "^5.7.8",
     "nuxt": "^2.14.12",
     "nuxt-i18n": "^6.20.0",
     "nuxt-tailvue": "^1.0.68",
@@ -35,6 +36,7 @@
     "vue-chartjs": "^3.5.1",
     "vue-easy-slider": "^5.3.4",
     "vue-lodash": "^2.1.2",
+    "vue-simple-suggest": "^1.10.3",
     "yarn": "^1.22.10"
   },
   "devDependencies": {

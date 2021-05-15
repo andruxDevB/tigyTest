@@ -42,7 +42,7 @@
       >
         <div
           v-if="isOpen"
-          class="absolute mt-1 w-full rounded-md bg-white shadow-lg"
+          class="absolute mt-1 w-full z-30 rounded-md bg-white shadow-lg"
         >
           <ul
             tabindex="-1"

@@ -19,4 +19,16 @@ export default {
       console.error(e)
     }
   },
+
+  async findByEmail({ commit }, payload) {
+    try {
+      const { email } = payload
+      if (!email) return []
+      const response = await this.$api.$get(`/buscar/${email}`)
+      const users = response.data.user_list
+      return users
+    } catch (e) {
+      console.error(e)
+    }
+  },
 }

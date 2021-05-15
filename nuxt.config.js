@@ -43,6 +43,7 @@ export default {
     '~/plugins/vee-validate.js',
     '~/plugins/vue-svg-gauge.js',
     '~/plugins/vue-easy-slider.js',
+    '~/plugins/vue-simple-suggest.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -78,7 +79,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/svg',
     '@nuxtjs/auth-next',
-    ['nuxt-tailvue', { toast: true }],
+    ['nuxt-tailvue', { toast: true, modal: true }],
     [
       'nuxt-i18n',
       {

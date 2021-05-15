@@ -13,7 +13,7 @@
         Me gusta</span
       >
     </form-tg-button>
-    <form-tg-button type="flat">
+    <form-tg-button type="flat" @click.native="help()">
       <outline-hand-icon
         class="w-6 h-6 text-gray-400 mr-1 group-hover:text-gray-500"
       />
@@ -64,6 +64,23 @@ export default {
     like() {
       this.liked = !this.liked
       this.$store.dispatch('timeline/like', { eventId: this.eventId })
+    },
+    help() {
+      this.$modal.show({
+        type: 'info',
+        title: 'Brindar ayuda',
+        body: `Confirma tu ayuda y podrás ser gratamente recompenzado con una recompenza de Tigy's`,
+        primary: {
+          label: 'Primary Action',
+          theme: 'purple',
+          action: () => this.$toast.success('Primary Button clicked'),
+        },
+        secondary: {
+          label: 'Secondary Button',
+          theme: 'white',
+          action: () => this.$toast.info('Clicked Secondary'),
+        },
+      })
     },
   },
 }

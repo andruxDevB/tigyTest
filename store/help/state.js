@@ -38,26 +38,32 @@ export default () => ({
     {
       name: 'Todos',
       value: 6,
+      key: 'All',
     },
     {
       name: 'Buscar Contacto y Enviar',
       value: 1,
+      key: 'FindContact',
     },
     {
       name: 'Seleccionar un Contacto',
       value: 2,
+      key: 'Contact',
     },
     {
       name: 'Seleccionar un Grupo',
       value: 3,
+      key: 'Group',
     },
     {
       name: 'Seleccionar una Ciudad',
       value: 4,
+      key: 'City',
     },
     {
       name: 'Seleccionar un País',
       value: 5,
+      key: 'Country',
     },
   ],
 })
