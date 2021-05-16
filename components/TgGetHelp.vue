@@ -92,7 +92,7 @@
                         slim
                       >
                         <form-tg-textarea
-                          v-model="help.asunto"
+                          v-model="help.subject"
                           name="asunto"
                           :errors="errors"
                           >¿Que necesitas?</form-tg-textarea
@@ -105,7 +105,7 @@
                         slim
                       >
                         <form-tg-button-group
-                          v-model="help.cantidad_id"
+                          v-model="help.quantity"
                           :items="rewards"
                           name="recompenza"
                           :errors="errors"
@@ -121,7 +121,7 @@
                         slim
                       >
                         <form-tg-drop-down
-                          v-model="help.tipoayuda_id"
+                          v-model="help.privacy"
                           name="privacidad"
                           :items="privacy"
                           :errors="errors"
@@ -131,7 +131,7 @@
                     </div>
                     <div class="pt-4 pb-6">
                       <tg-get-help-destination
-                        :destination-key="_.get(help.tipoayuda_id, 'key')"
+                        :destination-key="_.get(help.privacy, 'key')"
                       />
                     </div>
                   </div>
@@ -145,12 +145,9 @@
                 >
                   Cancelar
                 </button>
-                <button
-                  type="submit"
-                  class="ml-4 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                <form-tg-button :loading="loading" class="ml-4 inline-flex"
+                  >Enviar solicitud</form-tg-button
                 >
-                  Enviar solicitud
-                </button>
               </div>
             </ValidationObserver>
           </section>
@@ -161,7 +158,7 @@
 </template>
 <script>
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapGetters } from 'vuex'
 
 export default {
   name: 'TgGetHelp',
@@ -172,6 +169,7 @@ export default {
   data() {
     return {
       help: {},
+      loading: false,
       countryList: [],
     }
   },
@@ -185,14 +183,42 @@ export default {
     privacy() {
       return this.$store.state.help.privacy
     },
+    ...mapGetters({
+      balance: 'profile/balance',
+      requestDestination: 'help/requestDestination',
+    }),
+  },
+  watch: {
+    'help.tipoayuda_id'() {
+      this.$store.commit('help/SET_REQUEST_DESTINATION', {})
+    },
   },
   methods: {
     ...mapMutations({
       sidebarToggle: 'help/TOGGLE_SIDEBAR',
     }),
-    async submit() {},
-    async getCountries() {
-      this.countryList = await this.$store.dispatch('location/getCountryList')
+    async submit() {
+      try {
+        this.loading = true
+        const isValid = await this.$refs.observer.validate()
+        if (isValid) {
+          const payload = {
+            subject: this.help.subject,
+            quantity: this.help.quantity.value,
+            privacy: this.help.privacy.value,
+            balance: this.balance.vsaldo,
+            requestDestination: this.requestDestination,
+          }
+          await this.$store.dispatch('help/request', payload)
+          this.sidebarToggle()
+          this.$toast.success('Solicitud enviada correctamente a la red')
+        }
+      } catch (err) {
+        console.log(err)
+        this.$toast.error('existio un error')
+      } finally {
+        this.loading = false
+      }
     },
   },
 }

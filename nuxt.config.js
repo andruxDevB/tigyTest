@@ -42,6 +42,7 @@ export default {
     '~/plugins/vue-charts.js',
     '~/plugins/vee-validate.js',
     '~/plugins/vue-svg-gauge.js',
+    '~/plugins/persisted-state.js',
     '~/plugins/vue-easy-slider.js',
     '~/plugins/vue-simple-suggest.js',
   ],
@@ -75,6 +76,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // 'nuxt-vite',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/svg',

@@ -6,7 +6,7 @@
           :title="selected.full_name"
           :subtitle="selected.email"
           :image="selected.image"
-          @click.native="selected = {}"
+          @click.native="discardSelection()"
         >
           <template #icon>
             <solid-x-icon
@@ -77,6 +77,13 @@ export default {
     },
     selectContact(contact) {
       this.selected = contact
+      this.$store.commit('help/SET_REQUEST_DESTINATION', {
+        ref_mail: this.selected.email,
+      })
+    },
+    discardSelection() {
+      this.selected = {}
+      this.$store.commit('help/SET_REQUEST_DESTINATION', {})
     },
   },
 }

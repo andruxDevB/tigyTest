@@ -95,9 +95,11 @@ export default {
         this.loading = true
         const isValid = await this.$refs.observer.validate()
         if (isValid) {
-          await this.$auth.loginWith('local', {
-            data: this.auth,
-          })
+          await this.$auth
+            .loginWith('local', {
+              data: this.auth,
+            })
+            .then(() => this.$store.dispatch('profile/getBalance'))
         }
       } catch (err) {
       } finally {

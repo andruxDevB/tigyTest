@@ -8,4 +8,7 @@ export default {
   user(state) {
     return state.user
   },
+  balance(state) {
+    return state.balance
+  },
 }

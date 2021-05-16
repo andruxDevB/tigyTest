@@ -37,6 +37,7 @@
     "vue-easy-slider": "^5.3.4",
     "vue-lodash": "^2.1.2",
     "vue-simple-suggest": "^1.10.3",
+    "vuex-persistedstate": "^4.0.0-beta.3",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
@@ -52,6 +53,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.5.0",
     "moment-locales-webpack-plugin": "^1.2.0",
+    "nuxt-vite": "^0.1.0",
     "postcss": "^8.2.9",
     "prettier": "^2.2.1",
     "sass": "^1.32.8",

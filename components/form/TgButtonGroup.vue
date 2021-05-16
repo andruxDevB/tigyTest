@@ -8,6 +8,7 @@
         <button
           v-for="(item, index) in items"
           :key="`option-${name}-${index}`"
+          type="button"
           :class="[
             baseClass,
             activeClass(index),

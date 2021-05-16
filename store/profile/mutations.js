@@ -1,4 +1,4 @@
-import { SET_PROFILE, SET_ACCOUNT } from './types'
+import { SET_PROFILE, SET_ACCOUNT, SET_BALANCE } from './types'
 
 export default {
   [SET_PROFILE](state, payload) {
@@ -9,5 +9,8 @@ export default {
   },
   [SET_ACCOUNT](state, payload) {
     state.account = payload
+  },
+  [SET_BALANCE](state, payload) {
+    state.balance = payload
   },
 }

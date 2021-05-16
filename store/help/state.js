@@ -1,5 +1,6 @@
 export default () => ({
   sidebar: false,
+  requestDestination: {},
   rewards: [
     {
       name: '1',

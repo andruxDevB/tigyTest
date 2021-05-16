@@ -26,6 +26,7 @@
 
     <div class="col-span-6 sm:col-span-3 lg:col-span-3">
       <form-tg-select
+        v-model="location.city"
         name="city"
         :loading="isLoading.city"
         :items="cityList"
@@ -44,6 +45,7 @@ export default {
       location: {
         country: null,
         province: null,
+        city: null,
       },
       countryList: [],
       provinceList: [],
@@ -77,6 +79,11 @@ export default {
       } finally {
         this.isLoading.city = false
       }
+    },
+    'location.city'(val) {
+      this.$store.commit('help/SET_REQUEST_DESTINATION', {
+        ciudad_id: val,
+      })
     },
   },
   mounted() {

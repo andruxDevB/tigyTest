@@ -2,6 +2,7 @@
   <div>
     <div class="col-span-6 sm:col-span-6 lg:col-span-3">
       <form-tg-select
+        v-model="country"
         :loading="isLoading"
         name="country"
         value-key="id"
@@ -20,6 +21,18 @@ export default {
       countryList: [],
       isLoading: false,
     }
+  },
+  computed: {
+    country: {
+      get() {
+        return this.$store.state.help.requestDestination.pais_id
+      },
+      set(value) {
+        this.$store.commit('help/SET_REQUEST_DESTINATION', {
+          pais_id: value,
+        })
+      },
+    },
   },
   mounted() {
     this.getCountryList()

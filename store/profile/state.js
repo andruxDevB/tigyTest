@@ -6,4 +6,5 @@ export default () => ({
   },
   stats: { ranking: {} },
   user: {},
+  balance: {},
 })

@@ -66,6 +66,13 @@ export default {
     },
     selectGroup(group) {
       this.selected = group
+      this.$store.commit('help/SET_REQUEST_DESTINATION', {
+        dgrupo_id: this.selected.id,
+      })
+    },
+    discardSelection() {
+      this.selected = {}
+      this.$store.commit('help/SET_REQUEST_DESTINATION', {})
     },
   },
 }

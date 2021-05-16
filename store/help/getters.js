@@ -8,4 +8,7 @@ export default {
   privacy(state) {
     return state.privacy
   },
+  requestDestination(state) {
+    return state.requestDestination
+  },
 }
