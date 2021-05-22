@@ -4,6 +4,7 @@
     <tg-sidebar-menu-mobile />
     <tg-sidebar-menu-desktop />
     <tg-get-help></tg-get-help>
+    <tg-price></tg-price>
     <div class="flex flex-col w-0 flex-1 overflow-hidden relative">
       <tg-header />
       <main

@@ -47,7 +47,7 @@
                       id="slide-over-heading"
                       class="text-lg font-medium text-white"
                     >
-                      Solicitar ayuda
+                      Enviar Reconocimiento
                     </h2>
                     <div class="ml-3 h-7 flex items-center">
                       <button
@@ -77,8 +77,8 @@
                   </div>
                   <div class="mt-1">
                     <p class="text-sm text-purple-300">
-                      Describe tu necesidad y ofrece una recompenza en tu red de
-                      amistades o el mundo.
+                      Premia a tus amigos por sus buenas acciones y ayudlos a
+                      mejorar su pefil
                     </p>
                   </div>
                 </div>
@@ -91,12 +91,27 @@
                         name="asunto"
                         slim
                       >
-                        <form-tg-textarea
-                          v-model="help.subject"
-                          name="asunto"
+                        <form-tg-drop-down
+                          :items="contacts"
                           :errors="errors"
-                          >¿Que necesitas?</form-tg-textarea
+                          :loading="loadingContacts"
                         >
+                          Selecciona un amigo
+                          <template #item="{ item, isCurrent }">
+                            <FormTgDropDownItem
+                              :is-current="isCurrent"
+                              :image="item.image"
+                              :label="item.full_name"
+                            />
+                          </template>
+                          <template #selected="{ selected }">
+                            <FormTgDropDownItem
+                              :is-current="true"
+                              :image="selected.image"
+                              :label="selected.full_name"
+                            />
+                          </template>
+                        </form-tg-drop-down>
                       </ValidationProvider>
                       <ValidationProvider
                         v-slot="{ errors }"
@@ -105,7 +120,7 @@
                         slim
                       >
                         <form-tg-button-group
-                          v-model="help.quantity"
+                          v-model="price.quantity"
                           :items="rewards"
                           name="recompenza"
                           :errors="errors"
@@ -114,25 +129,6 @@
                           recompenza</form-tg-button-group
                         >
                       </ValidationProvider>
-                      <ValidationProvider
-                        v-slot="{ errors }"
-                        rules="required"
-                        name="privacidad"
-                        slim
-                      >
-                        <form-tg-drop-down
-                          v-model="help.privacy"
-                          name="privacidad"
-                          :items="privacy"
-                          :errors="errors"
-                          >Privacidad</form-tg-drop-down
-                        >
-                      </ValidationProvider>
-                    </div>
-                    <div class="pt-4 pb-6">
-                      <tg-get-help-destination
-                        :destination-key="_.get(help.privacy, 'key')"
-                      />
                     </div>
                   </div>
                 </div>
@@ -157,46 +153,42 @@
   </transition>
 </template>
 <script>
-import { ValidationObserver, ValidationProvider } from 'vee-validate'
-import { mapMutations, mapGetters } from 'vuex'
+import { mapMutations } from 'vuex'
 
 export default {
-  name: 'TgGetHelp',
-  components: {
-    ValidationObserver,
-    ValidationProvider,
-  },
+  name: 'TgPrice',
+  components: {},
   data() {
     return {
-      help: {},
+      price: {},
+      contacts: [],
       loading: false,
-      countryList: [],
+      loadingContacts: false,
     }
   },
   computed: {
     isVisible() {
-      return this.$store.state.help.sidebar
+      return this.$store.state.price.sidebar
     },
     rewards() {
       return this.$store.state.help.rewards
     },
-    privacy() {
-      return this.$store.state.help.privacy
-    },
-    ...mapGetters({
-      balance: 'profile/balance',
-      requestDestination: 'help/requestDestination',
-    }),
   },
-  watch: {
-    'help.tipoayuda_id'() {
-      this.$store.commit('help/SET_REQUEST_DESTINATION', {})
-    },
+  mounted() {
+    this.getContactList()
   },
   methods: {
     ...mapMutations({
-      sidebarToggle: 'help/TOGGLE_SIDEBAR',
+      sidebarToggle: 'price/TOGGLE_SIDEBAR',
     }),
+    async getContactList() {
+      try {
+        this.loadingContacts = true
+        this.contacts = await this.$store.dispatch('friends/getList')
+      } finally {
+        this.loadingContacts = false
+      }
+    },
     async submit() {
       try {
         this.loading = true

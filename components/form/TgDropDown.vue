@@ -1,7 +1,7 @@
 <template>
   <div>
     <label id="listbox-label" class="block text-sm font-medium text-gray-700">
-      <slot></slot>
+      <slot v-if="!loading"></slot>
     </label>
     <div class="mt-1 relative">
       <button
@@ -13,7 +13,9 @@
         @click="isOpen = !isOpen"
       >
         <span v-if="currentIndex >= 0" class="block truncate">
-          {{ items[currentIndex].name }}
+          <slot name="selected" :selected="items[currentIndex]">
+            {{ items[currentIndex].name }}
+          </slot>
         </span>
         <span v-else class="block truncate text-gray-400"> Selecciona </span>
         <span
@@ -67,7 +69,10 @@
                   isCurrent(index) ? 'font-semibold' : 'font-normal',
                   'block truncate group-hover:text-white',
                 ]"
-                >{{ item.name }}
+              >
+                <slot name="item" :item="item" :isCurrent="isCurrent(index)"
+                  >{{ item.name }}
+                </slot>
               </span>
               <span
                 v-if="isCurrent(index)"
@@ -84,6 +89,11 @@
           </ul>
         </div>
       </transition>
+      <common-tg-loading-circle
+        v-if="loading"
+        class="absolute bottom-2 left-3"
+        color="purple"
+      />
     </div>
     <template v-if="isInvalid">
       <p
@@ -121,6 +131,10 @@ export default {
     errors: {
       type: Array,
       default: () => [],
+    },
+    loading: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

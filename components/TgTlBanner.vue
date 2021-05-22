@@ -19,6 +19,7 @@
       <tg-tl-banner-action
         icon="GiftIcon"
         label="Reconocimiento"
+        @click.native="sidebarPriceToggle()"
       ></tg-tl-banner-action>
     </div>
   </div>
@@ -31,6 +32,7 @@ export default {
   methods: {
     ...mapMutations({
       sidebarHelpToggle: 'help/TOGGLE_SIDEBAR',
+      sidebarPriceToggle: 'price/TOGGLE_SIDEBAR',
     }),
   },
 }
