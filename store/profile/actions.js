@@ -73,7 +73,7 @@ export default {
       commit('SET_BALANCE', balance)
       return balance
     } catch (e) {
-      console.error('error', e)
+      console.error(e)
     }
   },
 }

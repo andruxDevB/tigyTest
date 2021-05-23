@@ -1,5 +1,5 @@
 <template>
-  <slider animation="fade">
+  <slider animation="fade" class="z-10">
     <slider-item
       v-for="(virtue, index) in virtues"
       :key="`virtue-slide-${virtue.id}-${index}`"

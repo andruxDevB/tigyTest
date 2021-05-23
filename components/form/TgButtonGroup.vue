@@ -11,6 +11,7 @@
           type="button"
           :class="[
             baseClass,
+            isInvalid() ? 'border-red-500' : '',
             activeClass(index),
             isFirst(index) ? firstClass : '-ml-px',
             isLast(index) ? `${lastClass} -ml-px` : '',

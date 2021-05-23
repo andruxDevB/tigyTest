@@ -88,13 +88,15 @@
                       <ValidationProvider
                         v-slot="{ errors }"
                         rules="required"
-                        name="asunto"
+                        name="contacto"
                         slim
                       >
                         <form-tg-drop-down
+                          v-model="price.contact"
                           :items="contacts"
                           :errors="errors"
                           :loading="loadingContacts"
+                          name="contacto"
                         >
                           Selecciona un amigo
                           <template #item="{ item, isCurrent }">
@@ -116,18 +118,62 @@
                       <ValidationProvider
                         v-slot="{ errors }"
                         rules="required"
-                        name="recompenza"
+                        name="asunto"
+                        slim
+                      >
+                        <form-tg-textarea
+                          v-model="price.subject"
+                          name="asunto"
+                          :errors="errors"
+                          >Escribe un mensaje de
+                          agradecimiento</form-tg-textarea
+                        >
+                      </ValidationProvider>
+                      <ValidationProvider
+                        v-slot="{ errors }"
+                        rules="required"
+                        name="reconpenza"
                         slim
                       >
                         <form-tg-button-group
                           v-model="price.quantity"
                           :items="rewards"
-                          name="recompenza"
+                          name="reconpenza"
                           :errors="errors"
                         >
                           Selecciona el valor de la
                           recompenza</form-tg-button-group
                         >
+                      </ValidationProvider>
+                      <ValidationProvider
+                        v-slot="{ errors }"
+                        rules="required"
+                        name="actitudes"
+                        slim
+                      >
+                        <form-tg-radio-group
+                          v-model="price.attitudes"
+                          :items="attitudes"
+                          name="actitudes"
+                          :errors="errors"
+                        >
+                          Selecciona la actitud quieres reconocer
+                        </form-tg-radio-group>
+                      </ValidationProvider>
+                      <ValidationProvider
+                        v-slot="{ errors }"
+                        rules="required"
+                        name="valores"
+                        slim
+                      >
+                        <form-tg-radio-group
+                          v-model="price.values"
+                          :items="values"
+                          name="valores"
+                          :errors="errors"
+                        >
+                          Selecciona el valor que quieres reconocer
+                        </form-tg-radio-group>
                       </ValidationProvider>
                     </div>
                   </div>
@@ -142,7 +188,7 @@
                   Cancelar
                 </button>
                 <form-tg-button :loading="loading" class="ml-4 inline-flex"
-                  >Enviar solicitud</form-tg-button
+                  >Enviar reconocimiento</form-tg-button
                 >
               </div>
             </ValidationObserver>
@@ -173,9 +219,19 @@ export default {
     rewards() {
       return this.$store.state.help.rewards
     },
+    attitudes() {
+      return this.$store.state.emotions.attitudes
+    },
+    values() {
+      return this.$store.state.emotions.values
+    },
+    balance() {
+      return this.$store.state.profile.balance
+    },
   },
   mounted() {
     this.getContactList()
+    this.$store.dispatch('emotions/getList')
   },
   methods: {
     ...mapMutations({
@@ -195,16 +251,16 @@ export default {
         const isValid = await this.$refs.observer.validate()
         if (isValid) {
           const payload = {
-            subject: this.help.subject,
-            quantity: this.help.quantity.value,
-            privacy: this.help.privacy.value,
             balance: this.balance.vsaldo,
-            requestDestination: this.requestDestination,
+            date: this.$moment().format('DD/MM/YYYY'),
+            ...this.price,
           }
-          await this.$store.dispatch('help/request', payload)
+          await this.$store.dispatch('price/send', payload)
           this.sidebarToggle()
-          this.help = {}
-          this.$toast.success('Solicitud enviada correctamente a la red')
+          this.price = {}
+          this.$toast.success(
+            'Reconocimiento enviado correctamente a tu contacto'
+          )
         }
       } catch (err) {
         console.log(err)
