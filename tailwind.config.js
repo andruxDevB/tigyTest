@@ -1,7 +1,8 @@
 module.exports = {
   plugins: [
-    require('@tailwindcss/forms'),
     require('@tailwindcss/ui'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
     require('tailwindcss-blend-mode')(),
   ],
   variants: {

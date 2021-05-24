@@ -20,6 +20,7 @@
     "@nuxtjs/laravel-echo": "^1.1.0",
     "@nuxtjs/svg": "^0.1.12",
     "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/ui": "^0.7.2",
     "add": "^2.0.6",
     "chart.js": "^2.9.4",

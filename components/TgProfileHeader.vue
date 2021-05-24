@@ -5,7 +5,7 @@
       :style="`background-color: ${bg}`"
     >
       <h2
-        class="z-10 absolute text-right z-10 right-6 -bottom-10 text-white text-5xl sm:text-6xl uppercase font-bold opacity-50"
+        class="z-10 absolute text-right mt-5 z-10 right-6 -bottom-10 text-white text-5xl sm:text-6xl uppercase font-bold opacity-50"
       >
         {{ subTitle }}
       </h2>
