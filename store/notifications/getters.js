@@ -1,3 +1,5 @@
+import find from 'lodash/find'
+
 export default {
   sidebar(state) {
     return state.sidebar
@@ -6,7 +8,7 @@ export default {
     return state.alerts
   },
   count(state) {
-    return state.count
+    return find(state.alerts, { viewed: false }).length
   },
   events(state) {
     return state.events

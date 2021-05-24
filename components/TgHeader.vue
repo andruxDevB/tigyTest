@@ -57,9 +57,12 @@
       </div>
       <div class="ml-4 flex items-center md:ml-6">
         <button
-          class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          class="relative bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           @click="notificationsSidebarToggle()"
         >
+          <common-tg-notification-badge>{{
+            notificationCount
+          }}</common-tg-notification-badge>
           <span class="sr-only">View notifications</span>
           <!-- Heroicon name: bell -->
           <svg
@@ -87,6 +90,11 @@ import { mapMutations } from 'vuex'
 
 export default {
   name: 'TgHeader',
+  computed: {
+    notificationCount() {
+      return this.$store.state.notifications.count
+    },
+  },
   methods: {
     ...mapMutations({
       navToggle: 'nav/TOGGLE_MOBILE',
