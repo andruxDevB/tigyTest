@@ -8,5 +8,11 @@
 <script>
 export default {
   name: 'TgFriendsRequestsActionsSended',
+  props: {
+    friend: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>

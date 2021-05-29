@@ -58,8 +58,35 @@ export default {
         mensaje: message,
       }
       await this.$api.$post(`/comentar`, params)
+
+      return comment
     } catch (e) {
       console.error(e)
+    }
+  },
+  async getById({ commit }, payload) {
+    try {
+      const { id } = payload
+
+      const response = await this.$api.$get(`/adetalle/${id}`)
+      const post = response.data.request_info
+      commit('SET_POST', post)
+      return post
+    } catch (e) {
+      console.error(e)
+    }
+  },
+  async support({ commit }, payload) {
+    try {
+      const data = {
+        ayuda_id: payload.id,
+        user_id: this.$auth.user.user_id,
+      }
+      const response = await this.$api.$post(`/apoyar`, data)
+      return response
+    } catch (e) {
+      console.error(e)
+      throw e
     }
   },
 }

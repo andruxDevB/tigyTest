@@ -1,7 +1,7 @@
 <template>
   <div class="w-0 flex-1 flex">
     <button :class="[baseClass, buttonClass]">
-      <slot>Action</slot>
+      <common-tg-loading-circle v-if="loading" /> <slot>Action</slot>
     </button>
   </div>
 </template>
@@ -12,6 +12,10 @@ export default {
     type: {
       type: String,
       default: 'flat',
+    },
+    loading: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

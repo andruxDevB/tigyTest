@@ -5,7 +5,7 @@
       :key="`alert-item-${index}`"
       :date="$moment(alert.created_at.date).toNow(true)"
       :image="alert.user.image"
-      :link="`/post/${alert.event_id}`"
+      :link="`/post/${alert.evento_id}`"
     >
       <template #title>
         <span class="font-bold">{{ alert.user.full_name }}</span>

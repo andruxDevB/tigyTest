@@ -11,7 +11,7 @@
         :sub-title="`${subTitle} ${$moment(friend.c_fecha).toNow(true)}`"
       >
         <template #actions>
-          <component :is="actionsComponent"></component
+          <component :is="actionsComponent" :friend="friend"></component
         ></template>
       </tg-friends-item>
     </ul>

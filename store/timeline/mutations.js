@@ -1,11 +1,14 @@
 import find from 'lodash/find'
 import get from 'lodash/get'
 
-import { SET_EVENTS, ADD_COMMENT_POST } from './types'
+import { SET_EVENTS, ADD_COMMENT_POST, SET_POST } from './types'
 
 export default {
   [SET_EVENTS](state, payload) {
     state.events = payload
+  },
+  [SET_POST](state, payload) {
+    state.post = payload
   },
   [ADD_COMMENT_POST](state, payload) {
     const comments = get(
