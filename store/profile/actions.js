@@ -11,9 +11,9 @@ export default {
       console.error(e)
     }
   },
-  async getGraphByUserId({ commit }) {
+  async getGraphByUserId({ commit }, payload) {
     try {
-      const userId = this.$auth.user.user_id
+      const { userId } = payload
       const response = await this.$api.$get(`/vgraficos/${userId}`)
       const graph = response.data.graficos
 
@@ -72,6 +72,15 @@ export default {
       const balance = response.data.saldos
       commit('SET_BALANCE', balance)
       return balance
+    } catch (e) {
+      console.error(e)
+    }
+  },
+  async getLevels({ commit }) {
+    try {
+      const response = await this.$api.$get(`/tsnivel`)
+      console.log(response)
+      return response
     } catch (e) {
       console.error(e)
     }

@@ -14,6 +14,7 @@
       <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <tg-friends-item
           v-for="(friend, i) in group.friends"
+          :id="friend.user_id"
           :key="`friend-card-${i}`"
           :title="friend.full_name"
           :sub-title="`Amigos desde hace ${$moment(

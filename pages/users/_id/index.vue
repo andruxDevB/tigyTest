@@ -6,21 +6,17 @@
     ></tg-profile-id-values-gratitude>
   </div>
 </template>
-
 <script>
 export default {
   data() {
     return {
       graphData: {},
-      levels: {},
     }
   },
   async fetch() {
     this.graphData = await this.$store.dispatch('profile/getGraphByUserId', {
-      userId: this.$auth.user.user_id,
+      userId: this.$route.params.id,
     })
-
-    this.levels = await this.$store.dispatch('profile/getLevels')
   },
 }
 </script>
