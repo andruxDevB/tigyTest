@@ -1,5 +1,6 @@
 <template>
   <div>
+    <tg-profile-id-progress :progress="progress"></tg-profile-id-progress>
     <tg-profile-id-stats></tg-profile-id-stats>
     <tg-profile-id-values-gratitude
       :data="graphData"
@@ -12,15 +13,17 @@ export default {
   data() {
     return {
       graphData: {},
-      levels: {},
+      levels: [],
+      progress: [],
     }
   },
   async fetch() {
     this.graphData = await this.$store.dispatch('profile/getGraphByUserId', {
       userId: this.$auth.user.user_id,
     })
-
-    this.levels = await this.$store.dispatch('profile/getLevels')
+    this.progress = await this.$store.dispatch('profile/getLevelByUserId', {
+      userId: this.$auth.user.user_id,
+    })
   },
 }
 </script>

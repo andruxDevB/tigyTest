@@ -1,4 +1,4 @@
-import { map } from 'lodash'
+import { map, values, merge, keyBy } from 'lodash'
 
 export default {
   async getByUserId({ commit }, payload) {
@@ -79,8 +79,23 @@ export default {
   async getLevels({ commit }) {
     try {
       const response = await this.$api.$get(`/tsnivel`)
-      console.log(response)
-      return response
+      const levels = response.data.sniveles
+      return levels
+    } catch (e) {
+      console.error(e)
+    }
+  },
+  async getLevelByUserId({ commit }, payload) {
+    try {
+      const { userId } = payload
+      const responseLevels = await this.$api.$get(`/tsnivel`)
+      const responseProgress = await this.$api.$get(`/ubica_nivel/${userId}`)
+      const levels = responseLevels.data.sniveles
+      const progress = responseProgress.data.progreso.logros
+
+      return values(
+        merge(keyBy(levels, 'snivel_id'), keyBy(progress, 'snivel_id'))
+      )
     } catch (e) {
       console.error(e)
     }

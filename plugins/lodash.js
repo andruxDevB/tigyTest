@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import map from 'lodash/map'
 import head from 'lodash/head'
 import take from 'lodash/take'
+import sumBy from 'lodash/sumBy'
 import chain from 'lodash/chain'
 import value from 'lodash/value'
 import slice from 'lodash/slice'
@@ -27,6 +28,7 @@ Vue.use(VueLodash, {
     map,
     head,
     take,
+    sumBy,
     chain,
     value,
     slice,
