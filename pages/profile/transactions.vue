@@ -1,30 +1,39 @@
 <template>
   <div class="bg-white overflow-hidden shadow rounded-lg">
-    <tg-table>
+    <common-tg-table>
       <template #head>
-        <tg-table-head>ID</tg-table-head>
-        <tg-table-head>Descripción</tg-table-head>
-        <tg-table-head>Fecha</tg-table-head>
-        <tg-table-head>Monto</tg-table-head>
-        <tg-table-head>Saldo</tg-table-head>
+        <common-tg-table-head>ID</common-tg-table-head>
+        <common-tg-table-head>Descripción</common-tg-table-head>
+        <common-tg-table-head>Fecha</common-tg-table-head>
+        <common-tg-table-head>Monto</common-tg-table-head>
+        <common-tg-table-head>Saldo</common-tg-table-head>
       </template>
+
       <template #body>
-        <tg-table-row
+        <common-tg-table-row
           v-for="(transaction, index) in transactions.data"
           :key="`transaction-item-${index}-${transaction.id}`"
         >
-          <tg-table-row-cell>{{ transaction.id }}</tg-table-row-cell>
-          <tg-table-row-cell>{{ transaction.descripcion }}</tg-table-row-cell>
-          <tg-table-row-cell>{{ transaction.fecha }}</tg-table-row-cell>
-          <tg-table-row-cell>
+          <common-tg-table-row-cell>{{
+            transaction.id
+          }}</common-tg-table-row-cell>
+          <common-tg-table-row-cell>{{
+            transaction.descripcion
+          }}</common-tg-table-row-cell>
+          <common-tg-table-row-cell>{{
+            transaction.fecha
+          }}</common-tg-table-row-cell>
+          <common-tg-table-row-cell>
             <tg-amount :type="transaction.efecto">{{
               transaction.valor
             }}</tg-amount>
-          </tg-table-row-cell>
-          <tg-table-row-cell>{{ transaction.saldo }}</tg-table-row-cell>
-        </tg-table-row>
+          </common-tg-table-row-cell>
+          <common-tg-table-row-cell>{{
+            transaction.saldo
+          }}</common-tg-table-row-cell>
+        </common-tg-table-row>
       </template>
-    </tg-table>
+    </common-tg-table>
     <nav
       class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6"
       aria-label="Pagination"
@@ -41,7 +50,7 @@
         </p>
       </div>
       <div class="flex-1 flex justify-between sm:justify-end">
-        <tg-button
+        <form-tg-button
           type="outline"
           :disabled="transactions.current_page === 1"
           @click.native="
@@ -49,8 +58,8 @@
           "
         >
           Anterior
-        </tg-button>
-        <tg-button
+        </form-tg-button>
+        <form-tg-button
           type="outline"
           custom-class="ml-3"
           :disabled="transactions.current_page === transactions.last_page"
@@ -59,7 +68,7 @@
           "
         >
           Siguiente
-        </tg-button>
+        </form-tg-button>
       </div>
     </nav>
   </div>
