@@ -26,46 +26,46 @@
       </div>
 
       <div class="col-span-6 sm:col-span-3">
-        <tg-select
+        <form-tg-select
           v-model="profile.personales.genero_id"
           name="gender"
           :items="genders"
           value-key="id"
           label-key="descripcion"
-          >Genero</tg-select
+          >Genero</form-tg-select
         >
       </div>
 
       <div class="col-span-6 sm:col-span-6 lg:col-span-3">
-        <tg-select
+        <form-tg-select
           v-model="user.pais_id"
           name="country"
           value-key="id"
           label-key="nombre_pais"
           :items="countryList"
-          >País</tg-select
+          >País</form-tg-select
         >
       </div>
 
       <div class="col-span-6 sm:col-span-3 lg:col-span-3">
-        <tg-select
+        <form-tg-select
           v-model="profile.adicionales.provincia_id"
           name="provice"
           :items="proviceList"
           value-key="id"
           label-key="nombre_prov"
-          >Provincia</tg-select
+          >Provincia</form-tg-select
         >
       </div>
 
       <div class="col-span-6 sm:col-span-3 lg:col-span-3">
-        <tg-select
+        <form-tg-select
           v-model="profile.adicionales.ciudad_id"
           name="city"
           :items="cityList"
           value-key="id"
           label-key="nombre_ciudad"
-          >Ciudad</tg-select
+          >Ciudad</form-tg-select
         >
       </div>
     </tg-profile-info-section>
@@ -104,24 +104,24 @@
       </div>
 
       <div class="col-span-6 sm:col-span-3">
-        <tg-select
+        <form-tg-select
           v-model="profile.adicionales.escolaridad_id"
           name="gender"
           :items="schooling"
           value-key="id"
           label-key="descripcion"
-          >Escolaridad</tg-select
+          >Escolaridad</form-tg-select
         >
       </div>
 
       <div class="col-span-6 sm:col-span-3">
-        <tg-select
+        <form-tg-select
           v-model="profile.adicionales.profesion_id"
           name="gender"
           :items="profession"
           value-key="id"
           label-key="descripcion"
-          >Profesión</tg-select
+          >Profesión</form-tg-select
         >
       </div>
     </tg-profile-info-section>
