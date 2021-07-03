@@ -54,6 +54,7 @@ export default {
   },
   methods: {
     sendComment() {
+      if (!this.message) return
       this.$store.dispatch('timeline/comment', {
         message: this.message,
         eventId: this.eventId,

@@ -3,6 +3,7 @@
     <tg-messenger-bubble />
     <tg-sidebar-menu-mobile />
     <tg-sidebar-menu-desktop />
+    <tg-sidebar-report />
     <tg-get-help></tg-get-help>
     <sidebar-tg-notifications />
     <tg-price></tg-price>

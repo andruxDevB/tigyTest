@@ -45,7 +45,7 @@
               {{ stats.ranking.ayudar }}</span
             >
             <span class="mt-2 text-sm font-medium text-gray-500">
-              enviadas
+              ejecutadas
             </span>
           </div>
         </div>

@@ -1,5 +1,6 @@
 <template>
   <button
+    :type="submit ? 'submit' : 'button'"
     :class="[baseClass, buttonClass, customClass]"
     :disabled="loading || disabled"
   >
@@ -11,6 +12,10 @@
 export default {
   name: 'TgPostFooterActionsButton',
   props: {
+    submit: {
+      type: Boolean,
+      default: true,
+    },
     type: {
       type: String,
       default: 'primary',

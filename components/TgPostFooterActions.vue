@@ -43,7 +43,9 @@
         />
       </form-tg-button>
       <template #items>
-        <common-tg-menu-item>Reportar</common-tg-menu-item>
+        <common-tg-menu-item @click.native="report()"
+          >Reportar</common-tg-menu-item
+        >
         <common-tg-menu-item>Eliminar</common-tg-menu-item>
       </template>
     </common-tg-menu>
@@ -98,6 +100,10 @@ export default {
         },
       })
     },
+    report() {
+      this.$store.commit('post/report/TOGGLE_SIDEBAR')
+      this.$store.commit('post/report/SET_POST_ID', { postId: this.eventId })
+    },
     async shareTo(id) {
       try {
         await this.$store.dispatch('post/share', {
@@ -106,7 +112,11 @@ export default {
         })
         this.$toast.success('Compartido correctamente')
       } catch (e) {
-        this.$toast.error('Existió un error, intenta mas tarde')
+        this.$toast.show({
+          type: 'danger',
+          title: 'Error',
+          message: 'Existió un error, intenta mas tarde',
+        })
       }
     },
     async support() {

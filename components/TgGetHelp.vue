@@ -139,7 +139,7 @@
               </div>
               <div class="flex-shrink-0 px-4 py-4 flex justify-end">
                 <button
-                  type="button"
+                  type="outline"
                   class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
                   @click="sidebarToggle()"
                 >
@@ -215,8 +215,11 @@ export default {
           this.$toast.success('Solicitud enviada correctamente a la red')
         }
       } catch (err) {
-        console.log(err)
-        this.$toast.error('existio un error')
+        this.$toast.show({
+          type: 'danger',
+          title: 'Error',
+          message: 'Existió un error, intenta mas tarde',
+        })
       } finally {
         this.loading = false
       }

@@ -263,8 +263,11 @@ export default {
           )
         }
       } catch (err) {
-        console.log(err)
-        this.$toast.error('existio un error')
+        this.$toast.show({
+          type: 'danger',
+          title: 'Error',
+          message: 'Existió un error, intenta mas tarde',
+        })
       } finally {
         this.loading = false
       }
