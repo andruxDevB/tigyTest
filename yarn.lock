@@ -11101,38 +11101,28 @@ tty-browserify@0.0.0:
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
 
-tv-button@^1.0.7:
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/tv-button/-/tv-button-1.0.21.tgz#9122ad7deda95373edc5040d45e13443cdedab16"
-  integrity sha512-i//WUkW3ffBRpM0app/eUEy3sJMVkKjdPeQVe5BxsInYQ9wkCnsTl7CfqDEh3xjpHLuFclywSZkQL/lA4eCdNQ==
+tv-button@^1.0.7, tv-button@latest:
+  version "1.0.45"
+  resolved "https://registry.yarnpkg.com/tv-button/-/tv-button-1.0.45.tgz#ff2669cfb54c4493473ccd98a8a3502f26ca12b2"
+  integrity sha512-kL83Vq/xwNrixShPa42ThbKDJAh2Xd9nWZ+LhoyqfgZwp5eg5x6dnAUaDUkx6D0MEHILNrEwE1rrCU13jz5kBA==
 
-tv-button@latest:
-  version "1.0.41"
-  resolved "https://registry.yarnpkg.com/tv-button/-/tv-button-1.0.41.tgz#74ec653b5540e1f8b1e1e04817d96daadbff295e"
-  integrity sha512-GDwX8XDWw/Z75FaJuUu2Ixic4j9wX9eEn/2Sta81/C9Clb0ZmFwptUSnlMvDOiZ0r2DqWnj4hVtkMZ2WC7iXhA==
-
-tv-icon@^1.0.1:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/tv-icon/-/tv-icon-1.0.19.tgz#c820f96531c2cc1e6b7ce92a4b05f5d1f61d1f1e"
-  integrity sha512-4MMEiEf3qDVwdwT62HXO6uQLqPG0+Uoqy7DvoX1ccOsTsE6ETdTLS14cRXbblDAxNLMqEEQDkYJlOI7j5qf24w==
-
-tv-icon@latest:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/tv-icon/-/tv-icon-1.0.22.tgz#a1f7d5ac8983d9d2febea604425ea6f925c497d6"
-  integrity sha512-whjtSl9aAN0pVfl+cnHmgz1ArbuQ0aFiCGMbxJN5MHCN2dSuMPm9JMrEebkFROyiMD9MefafBHss1h3pt2M8Og==
+tv-icon@^1.0.1, tv-icon@latest:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/tv-icon/-/tv-icon-1.0.24.tgz#c952c8ac9277f1ace7bc128229d3b81a27306787"
+  integrity sha512-2tAaWWmGrjjwEPJjMBVAZBXvWuA2jpoYmCu5ipbaLVE0v9ve3gnT0EBjb8LtJn7f4BjySkcFlOqWPg0hzVN46Q==
 
 tv-modal@latest:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/tv-modal/-/tv-modal-1.0.22.tgz#9b5d34e7a83679bc2ef54375198b5e4487501c91"
-  integrity sha512-IrHwJ/QV4/POvTd8Opviml8KwrkKKRlJhCdlFb/Oyt0023qwStq1ctSej1xpbiFzNzBuKbT76RshaX5oEW+L8g==
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/tv-modal/-/tv-modal-1.0.24.tgz#dce88d4c197909856e1fa376fb63439b4c7686bd"
+  integrity sha512-4DA2f9XpB9GP3+XsH1e1rBQcvMI6CJkC5rTeCVgfhZz2NMUtTlz0mO71VJlB8KYzWSi4QoYOBtqBk2TLZ+fewQ==
   dependencies:
     tv-button "^1.0.7"
     tv-icon "^1.0.1"
 
 tv-toast@latest:
-  version "1.2.29"
-  resolved "https://registry.yarnpkg.com/tv-toast/-/tv-toast-1.2.29.tgz#5d69c5cc7dad007944e640484dee32d7c7ea203a"
-  integrity sha512-LRtLMEC3KKQftfDp0b9o65G0htyjHuMrtJXxGOB2+GZF6c9i9wpZIHZztMVdSVB6Q6qD6PzyqcGc6izzUMqsVw==
+  version "1.2.30"
+  resolved "https://registry.yarnpkg.com/tv-toast/-/tv-toast-1.2.30.tgz#f1a79d5b11908e7b7ed46dffbe20ce4c16c33563"
+  integrity sha512-giirzodNpV2NN9AVku3eSS2/kDO17iepDDTJoTLrasBnQx//6mUi9/fS6dksfRn7Mjn1P2AvDLsgFqhSBtbFEg==
   dependencies:
     tv-icon "^1.0.1"
 

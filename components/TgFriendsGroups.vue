@@ -18,6 +18,8 @@
   </div>
 </template>
 <script>
+import isUndefined from 'lodash/isUndefined'
+
 export default {
   name: 'TgFriendsGroups',
   props: {
@@ -33,6 +35,7 @@ export default {
   },
   computed: {
     filtered() {
+      if (isUndefined(this.groups)) return []
       return this.groups.filter((group) => {
         return group.group_name
           .toLowerCase()

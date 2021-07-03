@@ -88,7 +88,7 @@ export default {
         body: `Confirma tu ayuda y podrás ser gratamente recompenzado con una recompenza de Tigy's`,
         primary: {
           label: 'Confirmar',
-          theme: 'indigo',
+          theme: 'purple',
           action: () => this.support(),
         },
         secondary: {

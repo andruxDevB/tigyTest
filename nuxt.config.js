@@ -126,4 +126,8 @@ export default {
     color: '#99719E',
     height: '5px',
   },
+
+  router: {
+    middleware: ['sidebar'],
+  },
 }
