@@ -4,8 +4,10 @@
     <tg-sidebar-menu-mobile />
     <tg-sidebar-menu-desktop />
     <tg-sidebar-report />
+    <tg-sidebar-friends-group />
     <tg-get-help></tg-get-help>
     <sidebar-tg-notifications />
+
     <tg-price></tg-price>
     <div class="flex flex-col w-0 flex-1 overflow-hidden relative">
       <tg-header />

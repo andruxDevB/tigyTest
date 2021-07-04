@@ -2,7 +2,11 @@
   <div>
     <div class="sm:flex sm:justify-between mb-10">
       <tg-friends-search v-model="search"></tg-friends-search>
-      <form-tg-button class="mt-4 sm:mt-0">Crear grupo</form-tg-button>
+      <form-tg-button
+        class="mt-4 sm:mt-0"
+        @click.native="sidebarCreateGroupToggle()"
+        >Crear grupo</form-tg-button
+      >
     </div>
     <div>
       <ul
@@ -19,6 +23,7 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'TgFriendsGroups',
@@ -42,6 +47,11 @@ export default {
           .includes(this.search.toLowerCase())
       })
     },
+  },
+  methods: {
+    ...mapMutations({
+      sidebarCreateGroupToggle: 'friends/groups/TOGGLE_SIDEBAR',
+    }),
   },
 }
 </script>
