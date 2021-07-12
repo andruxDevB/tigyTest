@@ -20,5 +20,11 @@ export default {
     )
     if (isUndefined(comments)) comments = []
     comments.push(payload)
+
+    if (state.post && state.post.evento_id === payload.evento_id) {
+      let comments = get(state.post, 'comments_info.comments')
+      if (isUndefined(comments)) comments = []
+      comments.push(payload)
+    }
   },
 }
