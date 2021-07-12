@@ -1,1 +1,3 @@
 export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR'
+export const TOGGLE_SIDEBAR_LIST = 'TOGGLE_SIDEBAR_LIST'
+export const SET_INFO = 'SET_INFO'

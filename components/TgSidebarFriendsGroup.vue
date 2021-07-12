@@ -72,7 +72,7 @@
 import { ValidationObserver } from 'vee-validate'
 import { mapMutations, mapGetters } from 'vuex'
 export default {
-  name: 'TgSidebarFriendsGroup',
+  name: 'TgSidebarFriendsGroupCreate',
   components: {
     ValidationObserver,
   },

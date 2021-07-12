@@ -44,7 +44,7 @@ export default {
     '~/plugins/vue-svg-gauge.js',
     '~/plugins/persisted-state.js',
     '~/plugins/vue-easy-slider.js',
-    '~/plugins/vue-simple-suggest.js',
+    '~/plugins/vue-autosuggest.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

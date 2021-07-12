@@ -11,6 +11,7 @@ import slice from 'lodash/slice'
 import random from 'lodash/random'
 import flatten from 'lodash/flatten'
 import findKey from 'lodash/findKey'
+import flatMap from 'lodash/flatMap'
 import isMatch from 'lodash/isMatch'
 import groupBy from 'lodash/groupBy'
 import orderBy from 'lodash/orderBy'
@@ -35,6 +36,7 @@ Vue.use(VueLodash, {
     random,
     flatten,
     findKey,
+    flatMap,
     isMatch,
     groupBy,
     orderBy,

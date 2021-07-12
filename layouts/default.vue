@@ -5,6 +5,7 @@
     <tg-sidebar-menu-desktop />
     <tg-sidebar-report />
     <tg-sidebar-friends-group />
+    <tg-sidebar-friends-group-members />
     <tg-get-help></tg-get-help>
     <sidebar-tg-notifications />
 

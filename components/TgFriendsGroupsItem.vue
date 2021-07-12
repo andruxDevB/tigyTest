@@ -1,6 +1,7 @@
 <template>
   <li
-    class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
+    class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200 transition-all cursor-pointer hover:shadow-xl"
+    @click="show()"
   >
     <div class="flex-1 flex flex-col p-8">
       <h3 class="text-gray-900 text-2xl font-medium">
@@ -77,6 +78,12 @@ export default {
     },
     extraMembers() {
       return slice(this.group.group_info, this.members.length)
+    },
+  },
+  methods: {
+    show() {
+      this.$store.commit('friends/groups/SET_INFO', this.group)
+      this.$store.commit('friends/groups/TOGGLE_SIDEBAR_LIST')
     },
   },
 }
