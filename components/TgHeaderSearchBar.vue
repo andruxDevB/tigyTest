@@ -145,8 +145,10 @@ export default {
 }
 </script>
 <style lang="postcss">
-#autosuggest > div {
-  @apply h-full w-full lg:w-3/4;
+#autosuggest {
+  div[role='combobox'] {
+    @apply h-full;
+  }
 }
 .autosuggest {
   &__results {
