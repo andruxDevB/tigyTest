@@ -1,16 +1,10 @@
 module.exports = {
   plugins: [
-    require('@tailwindcss/ui'),
+    require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/line-clamp'),
     require('tailwindcss-blend-mode')(),
   ],
-  variants: {
-    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    mixBlendMode: ['responsive'],
-    backgroundBlendMode: ['responsive'],
-    isolation: ['responsive'],
-  },
   theme: {
     extend: {
       colors: {
@@ -55,7 +49,12 @@ module.exports = {
       },
     },
   },
-  purge: {
-    content: ['node_modules/tv-*/dist/tv-*.umd.min.js'],
-  },
+  content: [
+    'node_modules/tv-*/dist/tv-*.umd.min.js',
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+  ],
 }

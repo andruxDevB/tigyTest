@@ -16,7 +16,7 @@
         >
           <div
             v-if="isVisible"
-            class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+            class="absolute inset-0 bg-gray-500/75 transition-opacity"
             aria-hidden="true"
             @click="sidebarToggle()"
           ></div>

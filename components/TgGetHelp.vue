@@ -16,7 +16,7 @@
         >
           <div
             v-if="isVisible"
-            class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+            class="absolute inset-0 bg-gray-500/75 transition-opacity"
             aria-hidden="true"
           ></div>
         </transition>
@@ -137,7 +137,7 @@
                   </div>
                 </div>
               </div>
-              <div class="flex-shrink-0 px-4 py-4 flex justify-end">
+              <div class="shrink-0 px-4 py-4 flex justify-end">
                 <button
                   type="outline"
                   class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"

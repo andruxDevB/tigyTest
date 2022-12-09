@@ -3,7 +3,7 @@
     <transition-group name="list" tag="ul" class="space-y-4">
       <li v-for="item in comments" :key="`post-comment-${item.id}`">
         <div class="flex space-x-3">
-          <div class="flex-shrink-0">
+          <div class="shrink-0">
             <common-tg-avatar
               :image="item.user.image"
               :alt="item.user.image.full_name"

@@ -3,7 +3,7 @@
     class="max-w-3xl mx-auto p-4 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl"
   >
     <div class="flex items-center space-x-5">
-      <div class="flex-shrink-0">
+      <div class="shrink-0">
         <common-tg-avatar
           :image="user.image"
           :alt="user.full_name"

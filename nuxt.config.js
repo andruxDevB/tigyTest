@@ -72,6 +72,7 @@ export default {
         forceTLS: true,
       },
     ],
+    '@nuxt/postcss8',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -118,6 +119,13 @@ export default {
         localesToKeep: ['es'],
       }),
     ],
+    postcss: {
+      plugins: {
+        'postcss-import': true,
+        'tailwindcss/nesting': {},
+        'postcss-nested': {},
+      },
+    },
   },
 
   auth: authConfig,

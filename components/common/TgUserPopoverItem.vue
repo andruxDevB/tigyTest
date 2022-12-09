@@ -1,7 +1,7 @@
 <template>
   <li class="flex justify-start">
     <div class="flex items-center space-x-3">
-      <div class="flex-shrink-0">
+      <div class="shrink-0">
         <img
           class="h-5 w-5 rounded-full ring-2 ring-white"
           :src="image"

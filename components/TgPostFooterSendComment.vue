@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 flex space-x-4 items-center rounded-b bg-gray-50">
-    <div class="flex-shrink-0">
+    <div class="shrink-0">
       <common-tg-avatar
         :image="user.foto"
         :alt="user.nameuser"

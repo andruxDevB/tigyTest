@@ -8,14 +8,14 @@
         </h2>
       </div>
     </div>
-    <div class="flex flex-col flex-grow-0">
+    <div class="flex flex-col grow-0">
       <tg-tl-banner-action
         icon="HandIcon"
         label="Solicitar ayuda"
         @click.native="sidebarHelpToggle()"
       ></tg-tl-banner-action>
     </div>
-    <div class="flex flex-col flex-grow-0">
+    <div class="flex flex-col grow-0">
       <tg-tl-banner-action
         icon="GiftIcon"
         label="Reconocimiento"

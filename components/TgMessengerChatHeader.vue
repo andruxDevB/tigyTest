@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="thread.user.full_name"
-    class="flex-shrink-0 bg-white border-b border-gray-200"
+    class="shrink-0 bg-white border-b border-gray-200"
   >
     <!-- Toolbar-->
     <div class="h-16 flex flex-col justify-center">
@@ -9,7 +9,7 @@
         <div class="py-3 flex justify-between">
           <!-- Left buttons -->
           <div class="flex items-center space-x-4">
-            <div class="flex-shrink-0">
+            <div class="shrink-0">
               <div class="relative">
                 <img
                   class="h-11 w-11 rounded-full"
