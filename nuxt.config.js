@@ -45,6 +45,7 @@ export default {
     '~/plugins/persisted-state.js',
     '~/plugins/vue-easy-slider.js',
     '~/plugins/vue-autosuggest.js',
+    '~/plugins/clickoutside.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

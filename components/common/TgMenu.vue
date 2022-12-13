@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="relative z-10"
-    @click="visible = !visible"
-    @blur="visible = false"
-  >
+  <div v-clickoutside="hide" class="relative z-10" @click="visible = !visible">
     <slot></slot>
     <transition
       enter-active-class="ransition ease-out duration-100"
@@ -32,6 +28,11 @@ export default {
     return {
       visible: false,
     }
+  },
+  methods: {
+    hide() {
+      this.visible = false
+    },
   },
 }
 </script>
