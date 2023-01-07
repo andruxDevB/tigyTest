@@ -45,6 +45,7 @@ export default {
     '~/plugins/persisted-state.js',
     '~/plugins/vue-easy-slider.js',
     '~/plugins/vue-autosuggest.js',
+    '~/plugins/clickoutside.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -72,6 +73,7 @@ export default {
         forceTLS: true,
       },
     ],
+    '@nuxt/postcss8',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -118,6 +120,13 @@ export default {
         localesToKeep: ['es'],
       }),
     ],
+    postcss: {
+      plugins: {
+        'postcss-import': true,
+        'tailwindcss/nesting': {},
+        'postcss-nested': {},
+      },
+    },
   },
 
   auth: authConfig,

@@ -7,7 +7,7 @@
           aria-hidden="true"
         ></div>
         <div class="flex-1 flex items-center min-w-0 relative">
-          <span class="flex-shrink-0 inline-block relative">
+          <span class="shrink-0 inline-block relative">
             <img class="h-10 w-10 rounded-full" :src="image" />
           </span>
           <div class="ml-4">
@@ -18,7 +18,7 @@
           </div>
         </div>
       </nuxt-link>
-      <div class="ml-2 flex-shrink-0 relative inline-block text-left">
+      <div class="ml-2 shrink-0 relative inline-block text-left">
         <slot name="action"></slot>
       </div>
     </div>

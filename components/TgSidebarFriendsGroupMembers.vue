@@ -12,7 +12,7 @@
         </template>
         <template #body>
           <aside
-            class="hidden xl:order-first xl:flex xl:flex-col flex-shrink-0 w-96 border-r bg-white"
+            class="hidden xl:order-first xl:flex xl:flex-col shrink-0 w-96 border-r bg-white"
           >
             <div class="px-6 pt-6 pb-4">
               <h2 class="text-lg font-medium text-gray-900">Miembros</h2>
@@ -50,7 +50,7 @@
                     <div
                       class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-pink-500"
                     >
-                      <div class="flex-shrink-0">
+                      <div class="shrink-0">
                         <common-tg-avatar
                           :image="contact.user.image"
                           :alt="contact.user.full_name"

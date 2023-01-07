@@ -1,12 +1,12 @@
 <template>
   <!-- Static sidebar for desktop -->
-  <div class="hidden md:flex md:flex-shrink-0 bg-white">
+  <div class="hidden md:flex md:shrink-0 bg-white">
     <div class="flex flex-col w-64">
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div
         class="flex flex-col flex-grow border-r border-gray-200 pt-5 pb-4 bg-menu overflow-y-auto"
       >
-        <div class="flex items-center flex-shrink-0 px-4">
+        <div class="flex items-center shrink-0 px-4">
           <tg-sidebar-menu-user />
         </div>
         <div class="mt-5 flex-grow flex flex-col">

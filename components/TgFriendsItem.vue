@@ -17,7 +17,7 @@
         </div>
         <img
           v-if="avatar"
-          class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"
+          class="w-10 h-10 bg-gray-300 rounded-full shrink-0"
           :src="avatar"
           :alt="title"
         />

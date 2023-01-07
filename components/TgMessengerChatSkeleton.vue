@@ -2,7 +2,7 @@
   <section
     class="min-w-0 flex-1 h-full flex flex-col overflow-hidden xl:order-last"
   >
-    <div class="animate-pulse flex-shrink-0 border-b">
+    <div class="animate-pulse shrink-0 border-b">
       <!-- Toolbar-->
       <div class="pt-4 px-4s m:px-6 lg:px-8">
         <div class="flex space-x-4 mb-4">

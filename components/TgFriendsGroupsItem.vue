@@ -15,7 +15,7 @@
         <dt class="sr-only">Miembros</dt>
         <dd class="mt-3">
           <div class="flex items-center space-x-2 justify-center">
-            <div class="flex flex-shrink-0 -space-x-1">
+            <div class="flex shrink-0 -space-x-1">
               <img
                 v-for="(member, index) in members"
                 :key="`group-${group.id}-member-${index}`"
@@ -28,7 +28,7 @@
             <v-popover trigger="hover">
               <span
                 v-if="extraMembers.length > 0"
-                class="flex-shrink-0 text-xs leading-5 font-medium"
+                class="shrink-0 text-xs leading-5 font-medium"
                 >+{{ extraMembers.length }}</span
               >
               <template slot="popover">
@@ -39,7 +39,7 @@
                     class="flex justify-start"
                   >
                     <div class="flex items-center space-x-3">
-                      <div class="flex-shrink-0">
+                      <div class="shrink-0">
                         <img
                           class="h-5 w-5 rounded-full ring-2 ring-white"
                           :src="member.user.image"

@@ -61,7 +61,7 @@
                 </svg>
               </button>
             </div>
-            <div class="flex-shrink-0 flex items-center px-4">
+            <div class="shrink-0 flex items-center px-4">
               <tg-sidebar-menu-user />
             </div>
             <div class="mt-5 flex-1 h-0 overflow-y-auto">
