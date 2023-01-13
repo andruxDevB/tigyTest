@@ -10,41 +10,83 @@
           to="/auth/login"
           class="font-medium text-purple-600 hover:text-purple-500"
           prefetch
-          >Inicia sesión</NuxtLink
-        >
+          >Inicia sesión
+        </NuxtLink>
       </p>
     </div>
-    <form action="#" method="POST" class="mt-8 space-y-6">
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">
-          Email
-        </label>
-        <div class="mt-1">
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autocomplete="email"
-            required
-            class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
-          />
-        </div>
-      </div>
-      <div>
-        <button
-          type="submit"
-          class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+    <ValidationObserver
+      ref="observer"
+      class="mt-8 space-y-6"
+      tag="form"
+      @submit.prevent="userRecovery"
+    >
+      <ValidationProvider
+        v-slot="{ errors }"
+        rules="required|email"
+        name="email"
+        slim
+      >
+        <form-tg-input
+          v-model="model.email"
+          type="email"
+          name="email"
+          :errors="errors"
+          >Email</form-tg-input
         >
+      </ValidationProvider>
+      <div>
+        <form-tg-button custom-class="w-full" :loading="loading">
           Recuperar
-        </button>
+        </form-tg-button>
       </div>
-    </form>
+    </ValidationObserver>
   </div>
 </template>
 
 <script>
+import { ValidationObserver, ValidationProvider } from 'vee-validate'
+
 export default {
+  components: {
+    ValidationObserver,
+    ValidationProvider,
+  },
   layout: 'auth',
   transition: 'slide-bottom',
+  data() {
+    return {
+      loading: false,
+      model: {
+        email: '',
+      },
+    }
+  },
+  methods: {
+    async userRecovery() {
+      this.loading = true
+      try {
+        const isValid = await this.$refs.observer.validate()
+        if (isValid) {
+          this.$axios
+            .post('/intro/password/email', this.model)
+            .then((response) => {
+              this.$toast.success(
+                'Un correo de cambio de contraseña se ha enviado a su correo, favor seguir las instrucciones'
+              )
+              this.$router.push({
+                path: '/password/reset',
+                query: {
+                  token: response.data.token,
+                  email: this.model.email,
+                },
+              })
+            })
+        }
+      } catch (e) {
+      } finally {
+        this.loading = false
+      }
+    },
+  },
 }
 </script>
