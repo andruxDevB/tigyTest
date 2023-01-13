@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      baseClass: 'rounded-full',
+      baseClass: 'rounded-full max-w-full h-auto align-middle',
       sizeClass: {
         md: 'h-8 w-8',
         lg: 'h-10 w-10',
