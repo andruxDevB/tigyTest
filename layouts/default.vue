@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen flex overflow-hidden bg-gray-100">
-    <tg-messenger-bubble />
+    <!--<tg-messenger-bubble />-->
     <tg-sidebar-menu-mobile />
     <tg-sidebar-menu-desktop />
     <tg-sidebar-report />

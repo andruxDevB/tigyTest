@@ -13,7 +13,7 @@
         Me gusta</span
       >
     </form-tg-button>
-    <form-tg-button type="flat" @click.native="help()">
+    <!--<form-tg-button type="flat" @click.native="help()">
       <outline-hand-icon
         class="w-6 h-6 text-gray-400 mr-1 group-hover:text-gray-500"
       />
@@ -35,7 +35,7 @@
         >
         <common-tg-menu-item>Eliminar</common-tg-menu-item>
       </template>
-    </common-tg-menu>
+    </common-tg-menu>-->
     <common-tg-menu>
       <form-tg-button type="flat">
         <outline-dots-horizontal-icon
@@ -43,9 +43,9 @@
         />
       </form-tg-button>
       <template #items>
-        <common-tg-menu-item @click.native="report()"
+        <!--<common-tg-menu-item @click.native="report()"
           >Reportar</common-tg-menu-item
-        >
+        >-->
         <common-tg-menu-item>Eliminar</common-tg-menu-item>
       </template>
     </common-tg-menu>

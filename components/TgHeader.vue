@@ -24,7 +24,7 @@
     </button>
     <div class="flex-1 px-4 flex justify-between">
       <div class="flex-1 flex">
-        <TgHeaderSearchBar />
+        <!--<TgHeaderSearchBar />-->
       </div>
       <div class="ml-4 flex items-center md:ml-6">
         <button

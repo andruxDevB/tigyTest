@@ -2,7 +2,7 @@
   <div class="bg-white overflow-hidden shadow rounded-lg">
     <common-tg-table>
       <template #head>
-        <common-tg-table-head>ID</common-tg-table-head>
+        <!--<common-tg-table-head>ID</common-tg-table-head>-->
         <common-tg-table-head>Descripción</common-tg-table-head>
         <common-tg-table-head>Fecha</common-tg-table-head>
         <common-tg-table-head>Monto</common-tg-table-head>
@@ -14,9 +14,9 @@
           v-for="(transaction, index) in transactions.data"
           :key="`transaction-item-${index}-${transaction.id}`"
         >
-          <common-tg-table-row-cell>{{
+          <!--<common-tg-table-row-cell>{{
             transaction.id
-          }}</common-tg-table-row-cell>
+          }}</common-tg-table-row-cell>-->
           <common-tg-table-row-cell>{{
             transaction.descripcion
           }}</common-tg-table-row-cell>

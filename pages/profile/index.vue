@@ -1,7 +1,7 @@
 <template>
   <div>
-    <tg-profile-id-progress :progress="progress"></tg-profile-id-progress>
-    <tg-profile-id-stats></tg-profile-id-stats>
+    <!--<tg-profile-id-progress :progress="progress"></tg-profile-id-progress>-->
+    <!--<tg-profile-id-stats></tg-profile-id-stats>-->
     <tg-profile-id-values-gratitude
       :data="graphData"
     ></tg-profile-id-values-gratitude>

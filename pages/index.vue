@@ -2,7 +2,7 @@
   <div class="p-6">
     <div class="container">
       <div class="mx-auto max-w-xl">
-        <tg-tl-banner></tg-tl-banner>
+        <!--<tg-tl-banner></tg-tl-banner>-->
 
         <tg-post-skeleton v-if="$fetchState.pending" class="my-5" />
         <transition

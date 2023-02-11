@@ -11,20 +11,20 @@ export default () => ({
       link: '/profile',
       icon: 'UserCircle',
     },
-    {
-      label: 'Amigos',
-      link: '/friends',
-      icon: 'UserGroup',
-    },
-    {
-      label: 'Conversaciones',
-      link: '/messenger',
-      icon: 'Chat',
-    },
-    {
-      label: 'Soporte',
-      link: '/support',
-      icon: 'Support',
-    },
+    // {
+    //   label: 'Amigos',
+    //   link: '/friends',
+    //   icon: 'UserGroup',
+    // },
+    // {
+    //   label: 'Conversaciones',
+    //   link: '/messenger',
+    //   icon: 'Chat',
+    // },
+    // {
+    //   label: 'Soporte',
+    //   link: '/support',
+    //   icon: 'Support',
+    // },
   ],
 })

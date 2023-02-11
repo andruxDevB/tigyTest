@@ -8,12 +8,12 @@
         custom-class="border-3 border-white shadow-lg"
       ></common-tg-avatar>
     </div>
-    <div class="text-center">
+    <div v-if="user.username" class="text-center">
       <common-tg-badge
         :color="balance.ranking.color"
         :bg="balance.ranking.fondo"
       >
-        {{ balance.ranking.nivel }}
+        {{ user.username }}
       </common-tg-badge>
     </div>
   </div>
