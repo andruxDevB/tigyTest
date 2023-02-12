@@ -4,16 +4,16 @@
       <common-tg-avatar
         size="6xl"
         :image="user.foto"
-        :alt="user.username"
+        :alt="user.nameuser"
         custom-class="border-3 border-white shadow-lg"
       ></common-tg-avatar>
     </div>
-    <div v-if="user.username" class="text-center">
+    <div v-if="user.nameuser" class="text-center">
       <common-tg-badge
         :color="balance.ranking.color"
         :bg="balance.ranking.fondo"
       >
-        {{ user.username }}
+        {{ user.nameuser }}
       </common-tg-badge>
     </div>
   </div>

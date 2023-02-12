@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white shadow rounded-lg flex items-center">
-    <div class="flex-1 flex-grow">
+    <!--<div class="flex-1 flex-grow">
       <div class="p-6">
         <h2 class="text-gray-600">
           <strong>Solicita ayuda</strong> o
@@ -14,8 +14,8 @@
         label="Solicitar ayuda"
         @click.native="sidebarHelpToggle()"
       ></tg-tl-banner-action>
-    </div>
-    <div class="flex flex-col grow-0">
+    </div>-->
+    <div v-if="this.$auth.user.rol_id === 3" class="flex flex-col grow-0">
       <tg-tl-banner-action
         icon="GiftIcon"
         label="Reconocimiento"

@@ -77,8 +77,8 @@
                   </div>
                   <div class="mt-1">
                     <p class="text-sm text-purple-300">
-                      Premia a tus amigos por sus buenas acciones y ayudlos a
-                      mejorar su pefil
+                      Premia a tus colaboradores por sus buenas acciones y
+                      ayúdalos a mejorar
                     </p>
                   </div>
                 </div>
@@ -98,7 +98,7 @@
                           :loading="loadingContacts"
                           name="contacto"
                         >
-                          Selecciona un amigo
+                          Selecciona un colaborador
                           <template #item="{ item, isCurrent }">
                             <FormTgDropDownItem
                               :is-current="isCurrent"
@@ -115,7 +115,7 @@
                           </template>
                         </form-tg-drop-down>
                       </ValidationProvider>
-                      <ValidationProvider
+                      <!--<ValidationProvider
                         v-slot="{ errors }"
                         rules="required"
                         name="asunto"
@@ -128,7 +128,7 @@
                           >Escribe un mensaje de
                           agradecimiento</form-tg-textarea
                         >
-                      </ValidationProvider>
+                      </ValidationProvider>-->
                       <ValidationProvider
                         v-slot="{ errors }"
                         rules="required"

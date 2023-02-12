@@ -36,6 +36,9 @@
         <common-tg-menu-item>Eliminar</common-tg-menu-item>
       </template>
     </common-tg-menu>-->
+    <form-tg-button type="flat" @click.native="report()">
+      <span class="hidden sm:inline-block">Reportar</span>
+    </form-tg-button>
     <common-tg-menu>
       <form-tg-button type="flat">
         <outline-dots-horizontal-icon
@@ -43,9 +46,6 @@
         />
       </form-tg-button>
       <template #items>
-        <!--<common-tg-menu-item @click.native="report()"
-          >Reportar</common-tg-menu-item
-        >-->
         <common-tg-menu-item>Eliminar</common-tg-menu-item>
       </template>
     </common-tg-menu>

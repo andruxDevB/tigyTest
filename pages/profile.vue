@@ -1,7 +1,6 @@
 <template>
   <div>
-    <tg-profile-skeleton v-if="$fetchState.pending"></tg-profile-skeleton>
-    <tg-profile v-else :navigation="navigation"></tg-profile>
+    <tg-profile :navigation="navigation"></tg-profile>
   </div>
 </template>
 <script>

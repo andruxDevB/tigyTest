@@ -2,7 +2,7 @@
   <div>
     <div class="sm:flex sm:justify-between mb-10">
       <tg-friends-search v-model="search"></tg-friends-search>
-      <form-tg-button class="mt-4 sm:mt-0">Invitar amigo</form-tg-button>
+      <!--<form-tg-button class="mt-4 sm:mt-0">Invitar amigo</form-tg-button>-->
     </div>
 
     <div

@@ -12,8 +12,8 @@ export default {
     return {
       navigation: [
         { label: 'Mis amigos', link: '/friends' },
-        { label: 'Solicitudes', link: '/friends/requests' },
-        { label: 'Grupos', link: '/friends/groups' },
+        // { label: 'Solicitudes', link: '/friends/requests' },
+        // { label: 'Grupos', link: '/friends/groups' },
       ],
     }
   },

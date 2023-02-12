@@ -25,7 +25,9 @@ export default {
       return this.$auth.user
     },
     navItems() {
-      return this.$store.state.nav.items
+      return this.$auth.user.rol_id === 3
+        ? this.$store.state.nav.itemsAdmin
+        : this.$store.state.nav.items
     },
   },
   methods: {
