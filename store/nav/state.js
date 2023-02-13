@@ -1,7 +1,7 @@
 export default () => ({
   mobile: false,
   items: defaultMenus,
-  itemsAdmin: [...defaultMenus, navAdmin],
+  itemsAdmin: [...defaultMenus, ...navAdmin],
 })
 
 const defaultMenus = [
@@ -11,14 +11,21 @@ const defaultMenus = [
     icon: 'HomeIcon',
   },
   {
+    label: 'Premios',
+    link: '/gifs',
+    icon: 'GiftIcon',
+  },
+  {
     label: 'Mi Perfil',
     link: '/profile',
     icon: 'UserCircle',
   },
 ]
 
-const navAdmin = {
-  label: 'Trabajadores',
-  link: '/friends',
-  icon: 'UserGroup',
-}
+const navAdmin = [
+  {
+    label: 'Trabajadores',
+    link: '/friends',
+    icon: 'UserGroup',
+  },
+]
