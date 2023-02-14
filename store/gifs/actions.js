@@ -13,7 +13,7 @@ export default {
   async ask({ commit }, payload) {
     try {
       const { premioId, userId } = payload
-      const response = await this.$api.$post(`/pide/`, {
+      const response = await this.$api.$post(`/pide`, {
         premio_id: premioId,
         user_id: userId,
       })

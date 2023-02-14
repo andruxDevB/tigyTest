@@ -6,14 +6,14 @@
     >
       <article>
         <!-- Profile header -->
-        <tg-profile-header
+        <!--<tg-profile-header
           :name="`${profile.personales.nombres} ${profile.personales.apellidos}`"
           :image="user.foto"
           :bg="stats.ranking.fondo"
           :color="stats.ranking.color"
           :title="stats.ranking.nivel"
           :sub-title="stats.ranking.significado"
-        />
+        />-->
         <!-- Tabs -->
         <common-tg-tab-navigation
           :items="navigation"
