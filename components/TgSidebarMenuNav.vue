@@ -7,7 +7,18 @@
     />
     <a
       href="javascript:void(0)"
-      class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+      class="
+        text-gray-600
+        hover:bg-gray-50 hover:text-gray-900
+        group
+        flex
+        items-center
+        px-2
+        py-2
+        text-sm
+        font-medium
+        rounded-md
+      "
       @click="logout()"
     >
       <outline-logout-icon
@@ -25,9 +36,17 @@ export default {
       return this.$auth.user
     },
     navItems() {
-      return this.$auth.user.rol_id === 3
-        ? this.$store.state.nav.itemsAdmin
-        : this.$store.state.nav.items
+      let nav = []
+      switch (this.$auth.user.rol_id) {
+        case 7:
+          nav = this.$store.state.nav.itemsAdmin
+          break
+        case 6:
+        case 3:
+          nav = this.$store.state.nav.items
+          break
+      }
+      return nav
     },
   },
   methods: {
