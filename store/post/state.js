@@ -7,7 +7,7 @@ export default () => ({
   },
   share: [
     { label: 'Personal', id: 1 },
-    { label: 'Mis amigos', id: 2 },
+    { label: 'Mis colaboradores', id: 2 },
     { label: 'Mis grupo', id: 3 },
     { label: 'Ciudad', id: 4 },
     { label: 'País', id: 5 },
