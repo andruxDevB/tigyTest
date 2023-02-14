@@ -15,7 +15,7 @@
         @click.native="sidebarHelpToggle()"
       ></tg-tl-banner-action>
     </div>-->
-    <div v-if="this.$auth.user.rol_id === 3" class="flex flex-col grow-0">
+    <div v-if="this.$auth.user.rol_id === 7" class="flex flex-col grow-0">
       <tg-tl-banner-action
         icon="GiftIcon"
         label="Reconocimiento"
