@@ -115,20 +115,19 @@
                           </template>
                         </form-tg-drop-down>
                       </ValidationProvider>
-                      <!--<ValidationProvider
+                      <ValidationProvider
                         v-slot="{ errors }"
                         rules="required"
-                        name="asunto"
+                        name="motivo"
                         slim
                       >
                         <form-tg-textarea
-                          v-model="price.subject"
-                          name="asunto"
+                          v-model="price.motivo"
+                          name="motivo"
                           :errors="errors"
-                          >Escribe un mensaje de
-                          agradecimiento</form-tg-textarea
+                          >Escribe un motivo</form-tg-textarea
                         >
-                      </ValidationProvider>-->
+                      </ValidationProvider>
                       <ValidationProvider
                         v-slot="{ errors }"
                         rules="required"
@@ -255,7 +254,7 @@ export default {
             date: this.$moment().format('DD/MM/YYYY'),
             ...this.price,
           }
-          await this.$store.dispatch('price/send', payload)
+          await this.$store.dispatch('recognition/send', payload)
           this.sidebarToggle()
           this.price = {}
           this.$toast.success(
