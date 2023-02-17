@@ -2,7 +2,7 @@
   <div>
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
       <tg-profile-id-stats-item title>
-        <template #title> Valores</template>
+        <template #title> Aptitudes</template>
         <radar-chart
           :chart-data="data.values"
           :options="radarOptions"

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow rounded-lg flex items-center">
+  <div class="bg-white shadow rounded-lg">
     <!--<div class="flex-1 flex-grow">
       <div class="p-6">
         <h2 class="text-gray-600">

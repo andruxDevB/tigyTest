@@ -1,17 +1,19 @@
 <template>
   <div class="-mt-px flex divide-x divide-gray-200">
     <div class="w-0 flex-1 flex">
-      <button :class="[baseClass, buttonClass]" @click="ask()">
-        <common-tg-loading-circle v-if="loading" /> Pedir
+      <button :class="[baseClass, buttonClass]" @click="sidebarPriceToggle()">
+        <common-tg-loading-circle v-if="loading" /> Dar reconocimiento
       </button>
     </div>
   </div>
 </template>
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
-  name: 'TgGifsRequestsActions',
+  name: 'TgFriendRequestsActions',
   props: {
-    gif: {
+    friend: {
       type: Object,
       required: true,
     },
@@ -33,18 +35,9 @@ export default {
     },
   },
   methods: {
-    ask() {
-      this.loading = true
-      try {
-        const userId = this.$auth.user.user_id
-        this.$store.dispatch('gifs/ask', {
-          premioId: this.gif.id,
-          userId,
-        })
-      } finally {
-        this.loading = false
-      }
-    },
+    ...mapMutations({
+      sidebarPriceToggle: 'price/TOGGLE_SIDEBAR',
+    }),
   },
 }
 </script>

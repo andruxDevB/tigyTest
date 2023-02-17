@@ -3,6 +3,7 @@
     <!--<tg-profile-id-progress :progress="progress"></tg-profile-id-progress>-->
     <!--<tg-profile-id-stats></tg-profile-id-stats>-->
     <tg-profile-id-values-gratitude
+      v-if="$auth.user.rol_id != 7"
       :data="graphData"
     ></tg-profile-id-values-gratitude>
   </div>
@@ -24,6 +25,9 @@ export default {
     this.progress = await this.$store.dispatch('profile/getLevelByUserId', {
       userId: this.$auth.user.user_id,
     })
+  },
+  beforeMount() {
+    this.$auth.user.rol_id === 7 && this.$router.push('/profile/info')
   },
 }
 </script>

@@ -5,7 +5,8 @@
       <!--<form-tg-button class="mt-4 sm:mt-0">Invitar amigo</form-tg-button>-->
     </div>
 
-    <div
+    <TgTableFriends :friends="filtered"></TgTableFriends>
+    <!--<div
       v-for="(group, index) in grouped"
       :key="`frient-group-${index}`"
       class="mb-4"
@@ -29,7 +30,7 @@
             ></tg-friends-level-badge> </template
         ></tg-friends-item>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>

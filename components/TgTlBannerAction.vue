@@ -4,8 +4,8 @@
   >
     <div class="flex flex-row justify-center items-center h-full">
       <component :is="icon" :class="[baseIconClass]"></component>
+      <p :class="[baseTextClass]">{{ label }}</p>
     </div>
-    <p :class="[baseTextClass]">{{ label }}</p>
   </button>
 </template>
 <script>
@@ -34,7 +34,7 @@ export default {
     return {
       baseIconClass: 'text-gray-600 w-8 h-8 group-hover:text-purple-500',
       baseTextClass:
-        'text-gray-600 group-hover:text-purple-500 subpixel-antialiased px-2 py-1 tracking-wide leading-tight text-sm',
+        'text-gray-600 group-hover:text-purple-500 subpixel-antialiased px-2 py-1 tracking-wide leading-tight text-l',
     }
   },
 }
