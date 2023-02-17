@@ -30,7 +30,6 @@ import TgPostSkeleton from '~/components/TgPostSkeleton.vue'
 export default {
   components: { TgPostSkeleton },
   async fetch() {
-    debugger
     await this.$store.dispatch('timeline/get')
   },
   head() {
