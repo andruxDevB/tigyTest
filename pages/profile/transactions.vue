@@ -1,6 +1,41 @@
 <template>
   <div class="bg-white overflow-hidden shadow rounded-lg">
-    <common-tg-table>
+    <common-tg-table v-if="this.$auth.user.rol_id === 7">
+      <template #head>
+        <!--<common-tg-table-head>ID</common-tg-table-head>-->
+        <common-tg-table-head>Descripción</common-tg-table-head>
+        <common-tg-table-head>Fecha</common-tg-table-head>
+        <common-tg-table-head>Monto</common-tg-table-head>
+        <common-tg-table-head>Colaborador</common-tg-table-head>
+      </template>
+
+      <template #body>
+        <common-tg-table-row
+          v-for="(transaction, index) in transactions.data"
+          :key="`transaction-item-${index}-${transaction.id}`"
+        >
+          <!--<common-tg-table-row-cell>{{
+            transaction.id
+          }}</common-tg-table-row-cell>-->
+          <common-tg-table-row-cell>{{
+            transaction.descripcion
+          }}</common-tg-table-row-cell>
+          <common-tg-table-row-cell>{{
+            transaction.fecha
+          }}</common-tg-table-row-cell>
+          <common-tg-table-row-cell>
+            <tg-amount :type="transaction.efecto">{{
+              transaction.premio
+            }}</tg-amount>
+          </common-tg-table-row-cell>
+          <common-tg-table-row-cell>{{
+            transaction.usuario1
+          }}</common-tg-table-row-cell>
+        </common-tg-table-row>
+      </template>
+    </common-tg-table>
+
+    <common-tg-table v-else-if="this.$auth.user.rol_id === 6">
       <template #head>
         <!--<common-tg-table-head>ID</common-tg-table-head>-->
         <common-tg-table-head>Descripción</common-tg-table-head>

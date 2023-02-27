@@ -13,7 +13,7 @@ export default {
       navigation: [
         { label: 'Mis Colaboradores', link: '/friends' },
         // { label: 'Solicitudes', link: '/friends/requests' },
-        // { label: 'Grupos', link: '/friends/groups' },
+        { label: 'Reconocimiento Múltiple', link: '/friends/groups' },
       ],
     }
   },

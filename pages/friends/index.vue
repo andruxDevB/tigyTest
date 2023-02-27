@@ -13,7 +13,7 @@ export default {
   },
   head() {
     return {
-      title: 'Mi amigos',
+      title: 'Colaboradores',
     }
   },
 }

@@ -25,7 +25,7 @@ const defaultMenus = [
 
 const navAdmin = [
   {
-    label: 'Trabajadores',
+    label: 'Colaboradores',
     link: '/friends',
     icon: 'UserGroup',
   },

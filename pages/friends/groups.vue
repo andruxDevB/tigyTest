@@ -5,15 +5,15 @@
 export default {
   data() {
     return {
-      groups: [],
+      friends: [],
     }
   },
   async fetch() {
-    this.groups = await this.$store.dispatch('friends/getGroups')
+    this.groups = await this.$store.dispatch('friends/getList')
   },
   head() {
     return {
-      title: 'Mi grupos',
+      title: 'Colaboradores Selección Múltiple',
     }
   },
 }
